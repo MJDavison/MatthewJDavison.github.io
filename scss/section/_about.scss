@@ -1,0 +1,23 @@
+/***
+ * 
+ * About
+ *  
+ */
+
+.about{
+    margin-left: 16px;
+    margin-right: 16px;    
+}
+
+.about samp{
+    color: var(--color-white);
+}
+
+.about samp a{
+    text-decoration: underline;
+    color: aqua;
+}
+
+.about samp a:focus{
+    color: aquamarine;
+}

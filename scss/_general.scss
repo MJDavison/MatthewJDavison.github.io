@@ -1,0 +1,21 @@
+/***
+ * 
+ * General CSS
+ *  
+ */
+body{
+    background: var(--color-bg);
+}
+
+p{
+    font-size: 14px;
+    line-height: 22px;    
+}
+
+h1{
+    color: var(--color-text-section-header);
+    text-align: center;
+    font-size: 49px;
+    padding: 0;
+    margin: 21px 0px 34px 0px;
+}

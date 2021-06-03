@@ -1,0 +1,45 @@
+.portfolio-item {
+    position: relative;      
+}
+
+.portfolio-item figcaption {    
+    top: 0;
+    background: rgba($color:$color-text-accent, $alpha: 0.9);
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.portfolio-item figcaption h3,
+.portfolio-item figcaption p,
+.portfolio-item figcaption button{
+    margin: auto 1rem;
+}
+
+.portfolio-item figcaption button{ 
+    width: max-content;
+    height: auto;
+    padding: .15em .5em;
+    align-self: flex-end;
+}
+
+.portfolio figcaption .modal-descripion{
+    display: none;
+}
+
+.portfolio-item#portfolio-primary figcaption .modal-descripion{
+    display: initial;
+}
+
+.portfolio figcaption{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    // top: -100%;
+}
+
+.portfolio-item:hover figcaption, .portfolio-item:focus figcaption{
+    top: 0;        
+}
+

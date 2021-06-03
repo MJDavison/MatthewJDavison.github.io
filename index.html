@@ -4,9 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/6ffc8200ca.js" crossorigin="anonymous"></script>
     <title>Personal Website</title>
 </head>
 <body>
+    <div class="navigation-button">
+        <span class="burger"></span>
+    </div>
+    <div class="welcome">
+        <h2>Welcome to my</h2>
+        <h1>Portfolio</h1>
+    </div>
+    <section class="intro">
+
+        <div class="intro-option intro--left">
+            <h1 class="intro-title">Design</h1>            
+        </div>
+        <div class="intro-option intro--right">
+            <h1 class="intro-title">code()</h1>            
+        </div>
+    </section>
+    <section class="cta">
+        <div class="profile-icon"></div>
+        <h3>Hi! My name is</h3>
+        <h2>Matthew Davison</h2>
+    </section>
     
+    <section class="portfolio">
+        <h1>My Portfolio</h1>
+        <div class="portfolio-items">
+        <figure class="portfolio-item" id="portfolio-primary">
+            <img src="/img/primary-portfolio.jpg" alt="a pair of glasses on a closed laptop">
+            <figcaption>
+                <h3 class="modal-title" id="title">Portfolio Item 1</h3>    
+                <p class="modal-descripion" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem optio commodi esse autem eos?</p>
+                <button class="more">Read More</button>
+            </figcaption>
+        </figure>
+        <figure class="portfolio-item" id="portfolio-1">
+            <img src="/img/portfolio1.jpg" alt="a leaf on a cut tree">
+            <figcaption>
+                <h3 class="modal-title" id="title">Portfolio Item 1</h3>    
+                <p class="modal-descripion" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem optio commodi esse autem eos?</p>
+                <button class="more">Read More</button>
+            </figcaption>
+        </figure>
+        <figure class="portfolio-item" id="portfolio-2">
+            <img src="/img/portfolio2.jpg" alt="A bridge in the night light">
+            <figcaption>
+                <h3 class="modal-title" id="title">Portfolio Item 1</h3>    
+                <p class="modal-descripion" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem optio commodi esse autem eos?</p>
+                <button class="more">Read More</button>
+            </figcaption>
+        </figure>
+        <figure class="portfolio-item" id="portfolio-3">
+            <img src="/img/portfolio3.jpg" alt="The ocean waves">
+            <figcaption>
+                <h3 class="modal-title" id="title">Portfolio Item 1</h3>    
+                <p class="modal-descripion" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem optio commodi esse autem eos?</p>
+                <button class="more">Read More</button>
+            </figcaption>
+        </figure>
+        <figure class="portfolio-item" id="portfolio-4">
+            <img src="/img/portfolio4.jpg" alt="A backstreet by the ocean">
+            <figcaption>
+                <h3 class="modal-title" id="title">Portfolio Item 1</h3>    
+                <p class="modal-descripion" id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem optio commodi esse autem eos?</p>
+                <button class="more">Read More</button>
+            </figcaption>
+        </figure>    
+        </div>        
+    </section>
+    <section class="about">
+        <h1>About Me</h1>                
+            <samp>
+                > $matthew.Name <br>
+                Matthew Davison <br><br>
+
+                > $matthew.Age <br>
+                22 <br><br>
+
+                > $matthew.Origin <br>
+                Plymouth, Devon <br><br>
+
+                > $matthew.Interests <br>
+                Listening to Music <br>
+                Watching Live Streamers <br>
+                Reading books and light novels <br>
+                Programming various projects <br> 
+                Trying my hand at web design <br>
+                Sound design... just how do sounds make you feel emotions?! <br><br>
+
+                > $matthew.Bio <br>
+                Hello! I’m Matthew. I’m a designer and a programmer. I first discovered the marvels of the computing world back in Primary School and since then, I’ve played around with creating various apps, websites, games and software. <br><br>
+
+                > $matthew.CV <br>
+                <a href="/downloads/CV.docx" download="Matthew Davison CV"> Click here</a> to download my CV!<br><br>
+                
+
+                > $matthew.Resumes <br>
+                <a href="" id="resumesLink">Click here</a> to view all my role-specific resumes! <br> <br>
+                
+                > $matthew.Disclaimer <br>
+                For privacy reasons, I haven't included details such as home address or mobile number on the CV or resumes. Please email me if interested and I can share my mobile number then. Thank you!
+            </samp>      
+    </section>
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <form action="" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" aria-label="name" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="text" aria-label="email" name="email" id="email">
+            <label for="message">Message</label>
+            <textarea aria-label="message" name="message" id="message"></textarea>  
+            <button type="submit">Send</button>          
+        </form>
+    </section>
+
+    <section class="footer">
+        <p>Follow me on Social Media</p>
+        <div class="social-icons">
+            <span class="fab fa-github"></span>
+            <span class="fab fa-twitter"></span>
+            <span class="fab fa-dribbble"></span>
+        </div>
+        <span class="copyright">&copy;Copyright 2022 Matthew Davison</span>
+    </section>
 </body>
 </html>

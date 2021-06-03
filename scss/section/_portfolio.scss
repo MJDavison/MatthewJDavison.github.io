@@ -1,0 +1,48 @@
+/**
+ * 
+ * Portfolio
+ * 
+ */
+.portfolio{
+    width: calc(100% - 2rem);    
+    margin: 0 auto;
+    position: relative;
+}
+
+.portfolio .portfolio-items{
+    width: 100%;
+    display: grid;
+    justify-content: center;    
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "portfolio-primary portfolio-primary"
+    "portfolio-1 portfolio-2"
+    "portfolio-3 portfolio-4";
+}
+
+.portfolio-items .portfolio-item{
+    margin: 0 auto;    
+}
+.portfolio-items .portfolio-item#portfolio-1{
+    grid-area: portfolio-1;
+}
+.portfolio-items .portfolio-item#portfolio-2{
+    grid-area: portfolio-2;
+}
+.portfolio-items .portfolio-item#portfolio-3{
+    grid-area: portfolio-3;
+}
+.portfolio-items .portfolio-item#portfolio-4{
+    grid-area: portfolio-4;
+}
+.portfolio-items .portfolio-item img{
+    height: 157.5px;
+    width: 157.5px;
+}
+.portfolio-items .portfolio-item#portfolio-primary{
+    grid-area: portfolio-primary;
+}
+.portfolio-items .portfolio-item#portfolio-primary img{
+    height: 315px;
+    width: 315px;
+}
