@@ -343,7 +343,7 @@ template {
  *  
  */
 body {
-  background: var(--color-bg);
+  background: #1E1E1E;
 }
 
 p {
@@ -352,7 +352,7 @@ p {
 }
 
 h1 {
-  color: var(--color-text-section-header);
+  color: #4EC9B0;
   text-align: center;
   font-size: 49px;
   padding: 0;
@@ -369,46 +369,18 @@ h1 {
   right: 15px;
   top: 15px;
   z-index: 1;
+  background-color: transparent;
+  border: none;
 }
 
-.navigation-button span {
-  content: " ";
-  display: block;
+.navigation-button .hamburger {
   width: 25px;
-  border-bottom: 2px solid var(--color-black);
-}
-
-.navigation-button span::before {
-  content: " ";
-  display: block;
-  position: relative;
-  bottom: 2px;
-  width: 25px;
-  border-bottom: 2px solid var(--color-black);
-}
-
-.navigation-button span::after {
-  content: " ";
-  display: block;
-  position: relative;
-  top: 8px;
-  width: 25px;
-  border-bottom: 2px solid var(--color-black);
-}
-
-/***
- * 
- * Intro
- *  
- */
-.intro {
-  display: grid;
-  grid-template-columns: auto auto;
+  height: 15px;
 }
 
 .welcome {
   display: grid;
-  align-content: center;
+  grid-template-rows: 50% 50%;
   justify-content: center;
   text-align: center;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("/img/pexels-negative-space-92904.jpg");
@@ -418,13 +390,16 @@ h1 {
   /* background-size: 100% 80vh; */
   width: 100%;
   height: 80vh;
-  position: relative;
+}
+
+.welcome .greeting {
+  align-self: end;
 }
 
 .welcome h1 {
   font-size: 48px;
   font-weight: bold;
-  color: var(--color-text-section-header);
+  color: #4EC9B0;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -436,6 +411,35 @@ h1 {
   font-size: 24px;
 }
 
+.welcome .down-pointer {
+  position: relative;
+  align-self: end;
+  bottom: 1rem;
+}
+
+.down-pointer ellipse {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.4px;
+}
+
+.welcome .down-pointer svg {
+  width: calc(18.5px*1.5);
+  height: calc(30.5px*1.5);
+  position: relative;
+  bottom: 0;
+}
+
+/***
+ * 
+ * Intro
+ *  
+ */
+.intro {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 .intro-option {
   display: grid;
   width: 100%;
@@ -445,7 +449,7 @@ h1 {
 }
 
 .intro-option.intro--left {
-  background: var(--color-white);
+  background: #FFF;
 }
 
 .intro-option.intro--left h1 {
@@ -461,22 +465,12 @@ h1 {
 }
 
 .intro-option.intro--right h1 {
-  color: var(--color-text-function);
-}
-
-/***
- * 
- * Intro
- *  
- */
-.intro {
-  display: grid;
-  grid-template-columns: auto auto;
+  color: #DCDCAA;
 }
 
 .welcome {
   display: grid;
-  align-content: center;
+  grid-template-rows: 50% 50%;
   justify-content: center;
   text-align: center;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), url("/img/pexels-negative-space-92904.jpg");
@@ -486,13 +480,16 @@ h1 {
   /* background-size: 100% 80vh; */
   width: 100%;
   height: 80vh;
-  position: relative;
+}
+
+.welcome .greeting {
+  align-self: end;
 }
 
 .welcome h1 {
   font-size: 48px;
   font-weight: bold;
-  color: var(--color-text-section-header);
+  color: #4EC9B0;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -504,6 +501,35 @@ h1 {
   font-size: 24px;
 }
 
+.welcome .down-pointer {
+  position: relative;
+  align-self: end;
+  bottom: 1rem;
+}
+
+.down-pointer ellipse {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 0.4px;
+}
+
+.welcome .down-pointer svg {
+  width: calc(18.5px*1.5);
+  height: calc(30.5px*1.5);
+  position: relative;
+  bottom: 0;
+}
+
+/***
+ * 
+ * Intro
+ *  
+ */
+.intro {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 .intro-option {
   display: grid;
   width: 100%;
@@ -513,7 +539,7 @@ h1 {
 }
 
 .intro-option.intro--left {
-  background: var(--color-white);
+  background: #FFF;
 }
 
 .intro-option.intro--left h1 {
@@ -529,7 +555,7 @@ h1 {
 }
 
 .intro-option.intro--right h1 {
-  color: var(--color-text-function);
+  color: #DCDCAA;
 }
 
 /***
@@ -554,12 +580,12 @@ h1 {
 
 .cta h3 {
   font-size: 14px;
-  color: var(--color-white);
+  color: #FFF;
 }
 
 .cta h2 {
   font-size: 24px;
-  color: var(--color-text-accent);
+  color: #569CD6;
 }
 
 .cta .profile-icon {
@@ -615,6 +641,8 @@ h1 {
 .portfolio-items .portfolio-item img {
   height: 157.5px;
   width: 157.5px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .portfolio-items .portfolio-item#portfolio-primary {
@@ -630,7 +658,7 @@ h1 {
   position: relative;
 }
 
-.portfolio-item figcaption {
+.portfolio-item figcaption.tapped {
   top: 0;
   background: rgba(86, 156, 214, 0.9);
   width: 100%;
@@ -640,19 +668,29 @@ h1 {
 
 .portfolio-item figcaption h3,
 .portfolio-item figcaption p,
-.portfolio-item figcaption button {
+.portfolio-item figcaption a {
   margin: auto 1rem;
 }
 
-.portfolio-item figcaption button {
+.portfolio-item figcaption p {
+  font-size: 1.5rem;
+}
+
+.portfolio-item figcaption a {
   width: max-content;
   height: auto;
   padding: 0.15em 0.5em;
   align-self: flex-end;
+  background: #4EC9B0;
+  border-radius: 20px;
 }
 
 .portfolio figcaption .modal-descripion {
   display: none;
+}
+
+.portfolio-item#portfolio-primary {
+  font-size: 1.5rem;
 }
 
 .portfolio-item#portfolio-primary figcaption .modal-descripion {
@@ -663,10 +701,94 @@ h1 {
   position: absolute;
   display: flex;
   flex-direction: column;
+  background: rgba(48, 48, 48, 0.9);
+  width: 100%;
+  height: 1.5em;
+  bottom: 1em;
+}
+
+.portfolio figcaption.tapped {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: -100%;
+}
+
+.portfolio-item:hover figcaption.tapped, .portfolio-item:focus figcaption.tapped {
+  position: absolute;
+  top: 0;
 }
 
 .portfolio-item:hover figcaption, .portfolio-item:focus figcaption {
-  top: 0;
+  position: fixed;
+  top: -100%;
+}
+
+.portfolio-modal {
+  position: fixed;
+  font-size: 14px;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: white;
+  box-shadow: 0 0 0 3rem rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+
+.portfolio-modal.modal-open {
+  display: block;
+}
+
+.portfolio-modal .text-image img {
+  width: 50%;
+  float: right;
+  clear: left;
+  margin-left: 1%;
+}
+
+.portfolio-modal .image-text img {
+  width: 50%;
+  float: left;
+  clear: right;
+}
+
+svg.close-modal {
+  position: fixed;
+  top: 1em;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+}
+
+.portfolio-modal .container {
+  position: fixed;
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 4rem);
+  height: calc(100vh - 4rem);
+  overflow-y: hidden;
+}
+
+.project-title, .project-image, .project-summary, .portfolio-modal p {
+  margin: 0 1em;
+}
+
+.portfolio-modal .project-image {
+  margin-left: -1rem;
+  width: calc(100vw - 2rem) !important;
+  height: 20vh !important;
+  object-fit: cover;
+}
+
+.portfolio-modal .project-summary {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /***
@@ -680,7 +802,7 @@ h1 {
 }
 
 .about samp {
-  color: var(--color-white);
+  color: #FFF;
 }
 
 .about samp a {
@@ -699,7 +821,7 @@ h1 {
 }
 
 .contact form label {
-  color: var(--color-white);
+  color: #FFF;
   margin-bottom: 4px;
 }
 

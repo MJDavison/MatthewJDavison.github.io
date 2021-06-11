@@ -1,16 +1,8 @@
-/***
- * 
- * Intro
- *  
- */
-.intro {
-    display: grid;
-    grid-template-columns: auto auto;
-    }
+
 
 .welcome{    
     display: grid;
-    align-content: center;
+    grid-template-rows: 50% 50%;
     justify-content: center;
     text-align: center;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), 
@@ -20,24 +12,59 @@
     background-position:  0,-80vw;
     /* background-size: 100% 80vh; */
     width: 100%;        
-    height: 80vh;
-    position: relative;
+    height: 80vh;     
+}
+.welcome .greeting{
+    align-self: end;
 }
 .welcome h1{  
     font-size: 48px;
     font-weight: bold;
-    color: var(--color-text-section-header);
+    color: $color-text-section-header;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    
 
 }
 .welcome h2{
     margin: 0;
     padding: 0;
     font-size: 24px;
+    
 }
 
+.welcome .down-pointer{
+    position: relative;
+    align-self: end;
+    bottom: 1rem;
+    
+
+    
+}
+.down-pointer ellipse{    
+    fill: none;
+    stroke: #000000;
+    stroke-width: 0.4px;
+}
+.welcome .down-pointer svg{
+    width: calc(18.5px*1.5);
+    height: calc(30.5px*1.5);
+    position: relative;
+    bottom: 0;
+    
+    
+}
+
+/***
+ * 
+ * Intro
+ *  
+ */
+.intro {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    }
 
 .intro-option{
     display: grid;
@@ -49,7 +76,7 @@
 
 
 .intro-option.intro--left{
-    background: var(--color-white);
+    background: $color-white;
     
 }
 .intro-option.intro--left h1{
@@ -69,5 +96,5 @@
 }
 
 .intro-option.intro--right h1{
-    color: var(--color-text-function);
+    color: $color-text-function;
 }
