@@ -4,9 +4,9 @@
  * 
  */
 .portfolio{
-    width: calc(100% - 2rem);    
-    margin: 0 auto;
+    margin: 0 2rem;        
     position: relative;
+    font-size: 1rem;
 }
 
 .portfolio .portfolio-items{
@@ -22,6 +22,11 @@
 
 .portfolio-items .portfolio-item{
     margin: 0 auto;    
+    height: 9.84375em;
+}
+.portfolio-items .portfolio-item#portfolio-primary {
+    margin: 0 auto;    
+    height: 19.6875em;
 }
 .portfolio-items .portfolio-item#portfolio-1{
     grid-area: portfolio-1;
@@ -36,18 +41,18 @@
     grid-area: portfolio-4;
 }
 .portfolio-items .portfolio-item img{
-    height: 157.5px;
-    width: 157.5px;
+    height: 9.84375em;
+    width: 9.84375em;
     object-fit: cover;    
-    object-position: center;
+    object-position: center;    
     
 }
 .portfolio-items .portfolio-item#portfolio-primary{
     grid-area: portfolio-primary;
 }
 .portfolio-items .portfolio-item#portfolio-primary img{
-    height: 315px;
-    width: 315px;
+    height: 19.6875em;
+    width: 19.6875em;
 }
 
 .portfolio-item {
@@ -87,8 +92,8 @@
 .portfolio figcaption .modal-descripion{
     display: none;
 }
-.portfolio-item#portfolio-primary{
-    font-size: 1.5rem;
+.portfolio-item#portfolio-primary figcaption.tapped{
+    font-size:1.5rem;    
 }
 .portfolio-item#portfolio-primary figcaption .modal-descripion{
     display: initial;
@@ -104,9 +109,6 @@
     bottom: 1em;
 }
 
-figcaption .tap{
-
-}
 .portfolio figcaption.tapped{
     position: fixed;
     display: flex;
@@ -124,4 +126,24 @@ figcaption .tap{
 .portfolio-item:hover figcaption, .portfolio-item:focus figcaption{
         position: fixed;
         top: -100%;
+}
+
+@media screen and (min-width: 666px){
+    .portfolio{
+        font-size: 1.5rem;
+    }
+    .portfolio .portfolio-items{
+
+        grid-template-columns: auto auto auto;
+        grid-template-areas:         
+        "portfolio-primary portfolio-1 portfolio-2"
+        "portfolio-primary portfolio-3 portfolio-4";
+    }   
+}
+
+@media screen and (min-width: 769px) {
+    .portfolio{
+        font-size: 2rem;
+    }
+    
 }

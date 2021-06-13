@@ -3,33 +3,46 @@
  * Call To Action (CTA)
  *  
  */
+
 .cta{
-    display: grid;
-    width: 100%;
-    height: 30vh;
+    display: grid;    
+    margin-top: 0px;
+    width: 100%;   
+    height: 60vh; 
     background: transparent;
     justify-content: center;
     text-align: center;
     
-}
-.cta h3,h2{
-    margin: 0;
-    padding: 0;
-    margin-top: 4px;
+    grid-template-areas: 
+    "figma profile vscode";
 }
 
-.cta h3{
+.cta img{
+    object-fit: cover;
+    height: 60vh;
     
-    font-size: 14px;
-    color: $color-white;
 }
-.cta h2{
-    font-size: 24px;
-    color: $color-text-accent;
+.figma, .vscode{
+    width: calc(100%);
+    display: grid;
 }
+.figma img{
+    
+    grid-area: figma;    
+    width: 100%;
+}
+.vscode img{    
+    grid-area: vscode;
+    width: 100%;
+}
+
+.cta .profile{
+    padding: 0 5vw;    
+    align-self: center;
+}
+
 
 .cta .profile-icon{
-    margin-top: 21px;
     justify-self: center;
     height: 131px;
     width: 131px;
@@ -37,4 +50,32 @@
     background-position-x:5px;
     background-size: contain;
     border-radius: 50%;
+
+    margin: 21px auto 0;
+    
 }
+
+.cta h3,h2{
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.cta h3{
+    font-size: 14px;
+    color: $color-white;
+    align-self: end;
+    grid-area: h3;
+
+}
+.cta h2{
+    font-size: 24px;
+    color: $color-text-accent;
+    grid-area: h2;
+    
+}
+
+
+
+
+

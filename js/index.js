@@ -1,29 +1,25 @@
 const navigationButton = document.querySelector(".navigation-button");
 const nav = document.querySelector(".hamburger");
-const intro_section = document.querySelector(".intro");
+
+const nav__svg = document.querySelector(".hamburger__svg");
+const cta_section = document.querySelector(".cta");
 const toggleNav = _ => {
     document.body.classList.toggle('nav-open');
 };
 
 navigationButton.addEventListener("click", _ => toggleNav());
 
-nav.addEventListener("click", _ => console.log(nav));
+const cta__sec = cta_section.getBoundingClientRect().top - 15-12;
 document.addEventListener("scroll", _ => {
-    if(window.pageYOffset > 534){
-        nav.style="fill:white";
+    
+    if(window.pageYOffset >= cta__sec){
+        nav__svg.style="stroke:white";
     } else{
-        nav.style="fill:black";
+        nav__svg.style="stroke:black";
     }
-    
+    console.log(window.pageYOffset);
+    console.log(cta__sec);
 
-    
-    console.log(intro_section.getBoundingClientRect().top);
-    
-    
 });
 
 
-
-console.log(window.pageYOffset);
-var elDistanceToTop = window.pageYOffset + intro_section.getBoundingClientRect().top;
-console.log(elDistanceToTop);

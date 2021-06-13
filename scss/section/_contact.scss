@@ -1,45 +1,92 @@
-.contact form{
-    display: grid;
-    margin: auto 30px;
-    grid-template-columns: auto;
-    }
+.contact form {
+  display: grid;
+  margin: auto 1rem;
+  grid-template-columns: auto;
+}
+
+.contact form label {
+    display: block;
+  color: $color-white;
+  margin-bottom: 4px;
+}
+.contact form label:not(:first-of-type) {
+  margin-top: 4px;
+}
+
+.contact form input,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    width: 100%;
     
-    .contact form label{
-        color: $color-white;
-        margin-bottom: 4px;
+}
+
+.contact form input {
+  height: 45px;
+}
+
+.contact form textarea {
+  height: 110px;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact form button {
+  width: calc(100% / 2);
+  height: 60px;
+  justify-self: right;
+  background: #1c53b6;
+  color: white;
+  font-size: 14px;
+  border: 1px solid #262626;
+  border-radius: 7px;
+  margin: 32px 0;
+}
+
+@media screen and (min-width: 666px){
+    .contact form {
+        margin: 0 2rem;
+        display: grid;
+        grid-template-areas: 
+        "name email"
+        "subject subject"
+        "message message"
+        ". submit";
+
+        column-gap: 1em;
+    }
+    form .name{
+        grid-area: name;
+    }
+    form .email{
+        grid-area: email;
+    }
+    form .subject{
+        grid-area: subject;
+    }
+    form .message{
+        grid-area: message;
+    }
+    form .submit {
+        grid-area: submit;
     }
     .contact form label:not(:first-of-type){
-        margin-top: 4px;
-    
+        margin-top: 0px;
     }
-    
-    
-    .contact form input,textarea{
-        
-        border-radius: 7px;
+}
+
+@media screen and (min-width: 769px) {
+    .contact form {
+        margin: 0 32rem;
+        display: grid;
+        grid-template-areas: 
+        "name email"
+        "subject subject"
+        "message message"
+        ". submit";
+
+        column-gap: 1em;
     }
-    
-    .contact form input{
-        
-        height: 45px;
-    }
-    
-    .contact form textarea{
-        
-        height: 110px;
-        resize:vertical;
-        min-height: 110px;
-    }
-    
-    .contact form button {
-        width: 158px;
-        height: 60px;
-        align-self: right;
-        justify-self: right;
-        background: #1C53B6;
-        color: white;
-        font-size: 14px;
-        border: 1px solid #262626;
-        border-radius: 7px;
-        margin: 32px 0;
-    }
+}

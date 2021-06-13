@@ -12,5 +12,6 @@ portfolioItems.addEventListener("click", e => {
     closeButton = modal.childNodes[1];
     closeButton.addEventListener("click", _ => {
         modal.classList.remove('modal-open');
+        document.body.style.overflowY="visible";
     });
 });

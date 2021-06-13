@@ -21,3 +21,13 @@
 .about samp a:focus{
     color: aquamarine;
 }
+@media screen and (min-width: 666px){
+    .about{
+        padding: 0 2rem;
+    }
+}
+@media screen and (min-width: 769px) {
+    .about{
+        margin: 0 32rem;
+    }
+}

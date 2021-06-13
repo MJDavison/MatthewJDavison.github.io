@@ -21,6 +21,7 @@
     
 }
 
+
 .footer .copyright::before{
     position: relative;
     top: -15px;
@@ -37,6 +38,14 @@
 
 
 
-.footer .social-icons i{
+.footer .social-icons span{
     font-size: 30px;
+    color: white;
+}
+
+.footer .social-icons span:hover{
+    color: $color-text-accent;
+}    
+.footer .social-icons span:focus{
+    color: $color-text-accent;
 }
