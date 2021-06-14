@@ -45,48 +45,48 @@ textarea {
   margin: 32px 0;
 }
 
-@media screen and (min-width: 666px){
-    .contact form {
-        margin: 0 2rem;
-        display: grid;
-        grid-template-areas: 
-        "name email"
-        "subject subject"
-        "message message"
-        ". submit";
+@include mq($breakpoint-phone){
+  .contact form {
+    margin: 0 2rem;
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "subject subject"
+    "message message"
+    ". submit";
 
-        column-gap: 1em;
-    }
-    form .name{
-        grid-area: name;
-    }
-    form .email{
-        grid-area: email;
-    }
-    form .subject{
-        grid-area: subject;
-    }
-    form .message{
-        grid-area: message;
-    }
-    form .submit {
-        grid-area: submit;
-    }
-    .contact form label:not(:first-of-type){
-        margin-top: 0px;
-    }
+    column-gap: 1em;
+}
+form .name{
+    grid-area: name;
+}
+form .email{
+    grid-area: email;
+}
+form .subject{
+    grid-area: subject;
+}
+form .message{
+    grid-area: message;
+}
+form .submit {
+    grid-area: submit;
+}
+.contact form label:not(:first-of-type){
+    margin-top: 0px;
+}
 }
 
-@media screen and (min-width: 769px) {
-    .contact form {
-        margin: 0 32rem;
-        display: grid;
-        grid-template-areas: 
-        "name email"
-        "subject subject"
-        "message message"
-        ". submit";
+@include mq($breakpoint-tablet){
+  .contact form {
+    margin: 0 32rem;
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "subject subject"
+    "message message"
+    ". submit";
 
-        column-gap: 1em;
-    }
+    column-gap: 1em;
+}
 }

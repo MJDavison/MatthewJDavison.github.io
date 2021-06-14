@@ -78,6 +78,9 @@
 }
 .portfolio-item figcaption p{
     font-size: 1.5rem;
+    font-family: $font-ff-poppins;
+    font-weight: $font-fw-regular;
+    font-style: $font-fs-normal;
 }
 
 .portfolio-item figcaption a{ 
@@ -128,10 +131,7 @@
         top: -100%;
 }
 
-@media screen and (min-width: 666px){
-    .portfolio{
-        font-size: 1.5rem;
-    }
+@include mq($breakpoint-phone){
     .portfolio .portfolio-items{
 
         grid-template-columns: auto auto auto;
@@ -141,9 +141,8 @@
     }   
 }
 
-@media screen and (min-width: 769px) {
+@include mq($breakpoint-tablet){
     .portfolio{
         font-size: 2rem;
     }
-    
 }

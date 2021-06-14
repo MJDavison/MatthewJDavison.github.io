@@ -7,10 +7,29 @@
 .about{
     margin-left: 16px;
     margin-right: 16px;    
+    
 }
-
+.about samp::before{
+    height: 1.5rem;
+    position: relative;
+    top: -1rem;
+    left: -3rem;
+    display: block;
+    width: 100%;
+    text-align: center;    
+    content: 'about.exe - Visual Studio Code';
+    background: #252526;
+    border-radius: 1rem 1rem 0 0;
+    padding: 0 3rem;
+}
 .about samp{
+    display: block;
+    background: #1E1E1E;
     color: $color-white;
+    font-family: $font-ff-sourcecode;
+    font-weight: $font-fw-medium;
+    padding-bottom: 1.5rem;
+    padding: 0 3rem 1.5rem;
 }
 
 .about samp a{
@@ -21,12 +40,12 @@
 .about samp a:focus{
     color: aquamarine;
 }
-@media screen and (min-width: 666px){
+@include mq($breakpoint-phone){
     .about{
         padding: 0 2rem;
     }
 }
-@media screen and (min-width: 769px) {
+@include mq($breakpoint-tablet){
     .about{
         margin: 0 32rem;
     }

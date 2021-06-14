@@ -1,4 +1,4 @@
-$color-bg:#1E1E1E;
+$color-bg:#333333;
 $color-text-regular: #CE9178;
 $color-text-section-header: #4EC9B0;
 $color-text-accent:#569CD6;
@@ -7,3 +7,22 @@ $color-button-border:#262626;
 $color-button:#303030;
 $color-white:#FFF;
 $color-black:#000;
+
+$font-ff-poppins:"Poppins", sans-serif;
+$font-ff-sourcecode:"Source Code Pro", monospace;
+
+//Used with Poppins
+$font-fw-thin:100;
+$font-fw-regular:400;
+$font-fw-bold:700;
+
+//Used with SourceCodePro
+$font-fw-medium:500;
+
+$font-fs-italic: italic;
+$font-fs-normal: normal;
+
+$breakpoint-phone:688px;
+$breakpoint-tablet:992px;
+$breakpoint-screen:1312px;
+
