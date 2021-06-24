@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Source+Code+Pro:wght@500&display=swap');
 @import 'mixins/mixins';
+
 @import 'normalize','variables', 'general';
 
 @import 'section/navigation', 'section/welcome';
 @import 'section/cta', 'section/portfolio', 'section/modal';
 @import 'section/about','section/contact','section/footer';
+
+@import 'responsive';
+
 
 
 

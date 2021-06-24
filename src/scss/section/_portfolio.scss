@@ -1,0 +1,208 @@
+/**
+ * 
+ * Portfolio
+ * 
+ */
+.portfolio{
+    // margin: 0 2rem;        
+    position: relative;
+    font-size: 1rem;
+    width: 100%;
+    grid-column: left/-right;
+}
+
+.projects{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;    
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas: 
+    "primary primary";
+    
+}
+
+.project, .project img{
+    width: 50vw;
+    height: 50vw;
+    margin: 0;
+    position: relative;
+}
+
+.project .project__caption{
+    position: fixed;
+    // top: -100%;
+    width: inherit;
+}
+
+
+.project .project__caption--active{        
+    background: $color-text-accent;
+    height: inherit;
+}
+.project .project__caption--inactive{        
+    height: max-content;
+    width: calc(100% - 5%);
+    text-align: right;
+    position: absolute;
+    top: auto;
+    bottom: 5%;
+    padding: .2em 0;
+    
+}
+// .project .project__caption--inactive 
+.fas.fa-hand-pointer {
+    background: $color-text-accent;
+    padding: .75em;
+    border-radius: 50%;
+    color: $color-white;  
+    text-shadow: 0 0 3px black;
+}
+
+
+
+.project:hover .project__caption--active,.project:focus .project__caption--active{
+    position: absolute;
+    top: 0;
+}
+.project:hover .project__caption--inactive,.project:focus .project__caption--inactive{
+    position: fixed;
+    bottom: -100%;
+}
+.project .project__caption .project__title, 
+.project .project__caption .project__description,
+.project .project__caption .project__link {
+    position: absolute;
+    left: 4%;
+    right: 1%;
+}
+.project .project__caption .project__title {
+    top: 2%;
+    width: inherit;
+}
+.project .project__caption .project__description {
+    top: 20%;
+    width: inherit;
+    visibility: hidden;
+}
+.project .project__caption .project__link {
+    bottom: 5%;
+    width: auto;
+    text-align: center;
+    left: 5%;
+    right: 5%;
+    padding: .2em 0;
+    background: $color-text-section-header;
+}
+
+.project--primary, .project--primary img{
+    width: 100vw;
+    height: 100vw;
+}
+.project--primary{
+    grid-area: primary;
+}
+.project--primary .project__caption .project__description{
+    visibility: visible;
+}
+// .portfolio-items .portfolio-item#portfolio-primary {
+//     margin: 0 auto;    
+//     height:max-content;
+//     width: 100vw;
+
+//     grid-row: 1;
+//     grid-column:primary / primary;
+// }
+
+// .portfolio-items .portfolio-item{
+//     margin: 0 auto;    
+//     height:50vw;
+//     width: 50vw;
+// }
+
+// .portfolio-items .portfolio-item img{
+//     height:50vw;
+//     width: 50vw;
+//     object-fit: cover;    
+//     object-position: center;    
+//     display: block;
+    
+// }
+
+// .portfolio-items .portfolio-item#portfolio-primary img{
+//     height:100vw;
+//     width: 100vw;
+// }
+
+// .portfolio-item {
+//     position: relative;      
+// }
+
+// .portfolio-item figcaption.tapped {    
+//     top: 0;
+//     background: rgba($color:$color-text-accent, $alpha: 0.9);
+//     width: 100%;
+//     height: 100%;
+//     position: relative;
+// }
+
+// .portfolio-item figcaption h3,
+// .portfolio-item figcaption p,
+// .portfolio-item figcaption a{
+//     margin: auto 1rem;
+// }
+// .portfolio-item figcaption p{
+//     font-size: 1.5rem;
+//     font-family: $font-ff-poppins;
+//     font-weight: $font-fw-regular;
+//     font-style: $font-fs-normal;
+// }
+
+// .portfolio-item figcaption a{ 
+//     width: max-content;
+//     height: auto;
+//     padding: .15em .5em;
+//     align-self: flex-end;
+//     background: $color-text-section-header;    
+//     border-radius: 20px;
+// }
+
+// .portfolio figcaption .modal-descripion{
+//     display: none;
+// }
+// .portfolio-item#portfolio-primary figcaption.tapped{
+//     font-size:1.5rem;    
+// }
+// .portfolio-item#portfolio-primary figcaption .modal-descripion{
+//     display: initial;
+// }
+
+// .portfolio figcaption{
+//     position: absolute;
+//     display: flex;
+//     flex-direction: column;    
+//     background: rgba($color:$color-button, $alpha: 0.9);
+//     width: 100%;
+//     height: 1.5em;
+//     bottom: 1em;
+// }
+
+// .portfolio figcaption.tapped{
+//     position: fixed;
+//     display: flex;
+//     flex-direction: column;    
+    
+//     top:-100%
+// }
+
+
+
+// .portfolio-item:hover figcaption.tapped, .portfolio-item:focus figcaption.tapped{
+//     position: absolute;
+//     top: 0;        
+// }
+// .portfolio-item:hover figcaption, .portfolio-item:focus figcaption{
+//         position: fixed;
+//         top: -100%;
+// }

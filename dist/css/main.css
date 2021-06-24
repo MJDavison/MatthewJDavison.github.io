@@ -338,18 +338,28 @@ template {
   display: none;
 }
 
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
 /***
  * 
  * General CSS
  *  
  */
-html {
+html, body {
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #333333;
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-areas: "left center right";
 }
 
 section {
@@ -376,7 +386,7 @@ h1 {
  */
 .navigation-button {
   position: fixed;
-  right: 15px;
+  right: 10%;
   top: 15px;
   z-index: 1;
   background-color: transparent;
@@ -414,88 +424,46 @@ nav {
   transition: ease-out 250ms;
 }
 
-@media screen and (min-width: 666px) {
-  .navigation-button {
-    visibility: hidden;
-  }
-
-  nav {
-    height: max-content;
-    width: 100%;
-    right: 0;
-    transform: translateX(0);
-    position: fixed;
-    z-index: 2;
-    grid-template-rows: max-content auto;
-    grid-template-columns: 50vw 50vw;
-    justify-items: start;
-    border-bottom: #3d8ed0 1px solid;
-  }
-
-  nav p {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 1;
-    justify-self: center;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    padding: 1rem 1rem 0.5rem;
-    font-size: 2rem;
-    border-bottom: #000 solid 1px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  nav div {
-    grid-row: 2;
-    display: grid;
-    grid-auto-flow: column;
-  }
-
-  nav div a {
-    padding: 0.25rem 1rem;
-    margin: 0.75rem 0;
-    width: max-content;
-    color: #000;
-  }
-
-  nav div a:hover {
-    border-bottom: #FFF solid 1px;
-    margin: calc(.75rem - 1px) 0;
-  }
-
-  nav .page-links {
-    margin-left: 2rem;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  nav .page-links a {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  nav .social-links {
-    margin-right: 2rem;
-    justify-self: right;
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: white;
-  }
+nav .name {
+  display: none;
 }
+
+nav .page-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+nav .page-links > a {
+  flex-grow: 100;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 25% 0;
+}
+
+nav .page-links a:hover, nav .page-links a:focus-visible {
+  background-color: rgba(78, 201, 176, 0.9);
+  border: none;
+}
+
+nav .page-links > a:not(:last-of-type) {
+  border-bottom: black solid 1px;
+}
+
+nav .social-links {
+  display: none;
+}
+
 /***
  * 
  * Welcome
  *  
  */
-.welcome {
+section.welcome {
   display: grid;
+  grid-column: left/-right;
   grid-auto-flow: row;
   justify-content: center;
   text-align: center;
@@ -506,7 +474,7 @@ nav {
   /* background-size: 100% 80vh; */
   width: 100%;
   height: 100vh;
-  margin-top: 0px !important;
+  margin-top: 0;
 }
 
 .welcome .greeting {
@@ -542,7 +510,7 @@ nav {
 
 .welcome .down-pointer svg {
   width: calc(18.5px*1.5);
-  height: calc(30.5px*1.5);
+  height: calc(31px*1.5);
   position: relative;
   bottom: 0;
 }
@@ -554,33 +522,32 @@ nav {
  */
 .cta {
   display: grid;
-  margin-top: 0px;
+  grid-column: 1/-1;
+  margin-top: 0;
   width: 100%;
-  height: 60vh;
+  height: max-content;
   background: transparent;
   justify-content: center;
   text-align: center;
-  grid-template-areas: "figma profile vscode";
+  grid-template-areas: "left center right";
+  grid-template-columns: 20% 1fr 20%;
 }
 
 .cta img {
   object-fit: cover;
-  height: 60vh;
-}
-
-.figma, .vscode {
-  width: calc(100%);
-  display: grid;
-}
-
-.figma img {
-  grid-area: figma;
+  position: relative;
+  top: 0;
+  bottom: 0;
   width: 100%;
+  height: 100%;
 }
 
-.vscode img {
-  grid-area: vscode;
-  width: 100%;
+.cta .cta__left {
+  grid-area: left;
+}
+
+.cta .cta__right {
+  grid-area: right;
 }
 
 .cta .profile {
@@ -624,145 +591,109 @@ nav {
  * 
  */
 .portfolio {
-  margin: 0 2rem;
   position: relative;
   font-size: 1rem;
-}
-
-.portfolio .portfolio-items {
   width: 100%;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto auto;
-  grid-template-areas: "portfolio-primary portfolio-primary" "portfolio-1 portfolio-2" "portfolio-3 portfolio-4";
+  grid-column: left/-right;
 }
 
-.portfolio-items .portfolio-item {
-  margin: 0 auto;
-  height: 9.84375em;
-}
-
-.portfolio-items .portfolio-item#portfolio-primary {
-  margin: 0 auto;
-  height: 19.6875em;
-}
-
-.portfolio-items .portfolio-item#portfolio-1 {
-  grid-area: portfolio-1;
-}
-
-.portfolio-items .portfolio-item#portfolio-2 {
-  grid-area: portfolio-2;
-}
-
-.portfolio-items .portfolio-item#portfolio-3 {
-  grid-area: portfolio-3;
-}
-
-.portfolio-items .portfolio-item#portfolio-4 {
-  grid-area: portfolio-4;
-}
-
-.portfolio-items .portfolio-item img {
-  height: 9.84375em;
-  width: 9.84375em;
-  object-fit: cover;
-  object-position: center;
-}
-
-.portfolio-items .portfolio-item#portfolio-primary {
-  grid-area: portfolio-primary;
-}
-
-.portfolio-items .portfolio-item#portfolio-primary img {
-  height: 19.6875em;
-  width: 19.6875em;
-}
-
-.portfolio-item {
-  position: relative;
-}
-
-.portfolio-item figcaption.tapped {
-  top: 0;
-  background: rgba(86, 156, 214, 0.9);
+.projects {
   width: 100%;
   height: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  grid-template-areas: "primary primary";
+}
+
+.project, .project img {
+  width: 50vw;
+  height: 50vw;
+  margin: 0;
   position: relative;
 }
 
-.portfolio-item figcaption h3,
-.portfolio-item figcaption p,
-.portfolio-item figcaption a {
-  margin: auto 1rem;
-}
-
-.portfolio-item figcaption p {
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.portfolio-item figcaption a {
-  width: max-content;
-  height: auto;
-  padding: 0.15em 0.5em;
-  align-self: flex-end;
-  background: #4EC9B0;
-  border-radius: 20px;
-}
-
-.portfolio figcaption .modal-descripion {
-  display: none;
-}
-
-.portfolio-item#portfolio-primary figcaption.tapped {
-  font-size: 1.5rem;
-}
-
-.portfolio-item#portfolio-primary figcaption .modal-descripion {
-  display: initial;
-}
-
-.portfolio figcaption {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  background: rgba(48, 48, 48, 0.9);
-  width: 100%;
-  height: 1.5em;
-  bottom: 1em;
-}
-
-.portfolio figcaption.tapped {
+.project .project__caption {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: -100%;
+  width: inherit;
 }
 
-.portfolio-item:hover figcaption.tapped, .portfolio-item:focus figcaption.tapped {
+.project .project__caption--active {
+  background: #569CD6;
+  height: inherit;
+}
+
+.project .project__caption--inactive {
+  height: max-content;
+  width: calc(100% - 5%);
+  text-align: right;
+  position: absolute;
+  top: auto;
+  bottom: 5%;
+  padding: 0.2em 0;
+}
+
+.fas.fa-hand-pointer {
+  background: #569CD6;
+  padding: 0.75em;
+  border-radius: 50%;
+  color: #FFF;
+  text-shadow: 0 0 3px black;
+}
+
+.project:hover .project__caption--active, .project:focus .project__caption--active {
   position: absolute;
   top: 0;
 }
 
-.portfolio-item:hover figcaption, .portfolio-item:focus figcaption {
+.project:hover .project__caption--inactive, .project:focus .project__caption--inactive {
   position: fixed;
-  top: -100%;
+  bottom: -100%;
 }
 
-@media screen and (min-width: 688px) {
-  .portfolio .portfolio-items {
-    grid-template-columns: auto auto auto;
-    grid-template-areas: "portfolio-primary portfolio-1 portfolio-2" "portfolio-primary portfolio-3 portfolio-4";
-  }
+.project .project__caption .project__title,
+.project .project__caption .project__description,
+.project .project__caption .project__link {
+  position: absolute;
+  left: 4%;
+  right: 1%;
 }
-@media screen and (min-width: 992px) {
-  .portfolio {
-    font-size: 2rem;
-  }
+
+.project .project__caption .project__title {
+  top: 2%;
+  width: inherit;
 }
+
+.project .project__caption .project__description {
+  top: 20%;
+  width: inherit;
+  visibility: hidden;
+}
+
+.project .project__caption .project__link {
+  bottom: 5%;
+  width: auto;
+  text-align: center;
+  left: 5%;
+  right: 5%;
+  padding: 0.2em 0;
+  background: #4EC9B0;
+}
+
+.project--primary, .project--primary img {
+  width: 100vw;
+  height: 100vw;
+}
+
+.project--primary {
+  grid-area: primary;
+}
+
+.project--primary .project__caption .project__description {
+  visibility: visible;
+}
+
 .portfolio-modal {
   position: fixed;
   font-size: 14px;
@@ -830,6 +761,80 @@ svg.close-modal {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+.about .portfolio-modal {
+  display: none;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "title title title" "search search-icon filter" "resume-items resume-items resume-items";
+  background: #333333;
+}
+
+.about .portfolio-modal.modal-open {
+  display: grid;
+}
+
+.about .portfolio-modal .project__title {
+  grid-column: title/title;
+  height: min-content;
+}
+
+.about .portfolio-modal .project__search {
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  margin: 0 1rem;
+}
+
+.about .portfolio-modal .project__search--icon {
+  font-size: 20px;
+}
+
+.about .portfolio-modal .project__search--input {
+  margin-right: 0.5rem;
+  flex-basis: 100%;
+}
+
+.about .portfolio-modal .project__filter {
+  grid-column: filter/filter;
+  height: min-content;
+  width: min-content;
+  font-size: 20px;
+  padding: 0 1rem;
+}
+
+.about .portfolio-modal .resume-items {
+  grid-column: resume-items/resume-items;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  border: black solid 2px;
+  height: min-content;
+  padding: 1rem;
+  width: calc(100% - 4rem);
+  margin: 0.25rem 1rem;
+}
+
+.resume-items .resume__card {
+  background: #569CD6;
+  margin: 0;
+  width: min-content;
+  height: min-content;
+  color: #FFF;
+  border: 3px solid #2c76b4;
+  border-radius: 0.5rem;
+}
+
+.resume-items .resume__role {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+
+.resume-items .resume__role::after {
+  content: " ";
+  margin-top: 4rem;
+  border-bottom: #FFF solid 2px;
+}
+
 /***
  * 
  * About
@@ -838,20 +843,21 @@ svg.close-modal {
 .about {
   margin-left: 16px;
   margin-right: 16px;
+  grid-column: left/-right;
 }
 
 .about samp::before {
-  height: 1.5rem;
+  height: max-content;
   position: relative;
   top: -1rem;
   left: -3rem;
   display: block;
   width: 100%;
   text-align: center;
-  content: "about.exe - Visual Studio Code";
+  content: "about - Visual Studio Code";
   background: #252526;
   border-radius: 1rem 1rem 0 0;
-  padding: 0 3rem;
+  padding: 0.5rem 3rem;
 }
 
 .about samp {
@@ -873,52 +879,45 @@ svg.close-modal {
   color: aquamarine;
 }
 
-@media screen and (min-width: 688px) {
-  .about {
-    padding: 0 2rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .about {
-    margin: 0 32rem;
-  }
-}
-.contact form {
-  display: grid;
-  margin: auto 1rem;
-  grid-template-columns: auto;
+.contact {
+  grid-column: 1/-1;
 }
 
-.contact form label {
+.contact-form {
+  margin: auto 1rem;
+}
+
+.contact-form label {
   display: block;
   color: #FFF;
   margin-bottom: 4px;
 }
 
-.contact form label:not(:first-of-type) {
+.contact-form label:not(:first-of-type) {
   margin-top: 4px;
 }
 
-.contact form input,
+.contact-form input,
 textarea {
   display: block;
   box-sizing: border-box;
   border-radius: 7px;
+  margin-top: 0.5em;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.contact form input {
+.contact-form input {
   height: 45px;
 }
 
-.contact form textarea {
+.contact-form textarea {
   height: 110px;
   resize: vertical;
   min-height: 110px;
 }
 
-.contact form button {
+.contact-form button {
   width: calc(100% / 2);
   height: 60px;
   justify-self: right;
@@ -930,46 +929,6 @@ textarea {
   margin: 32px 0;
 }
 
-@media screen and (min-width: 688px) {
-  .contact form {
-    margin: 0 2rem;
-    display: grid;
-    grid-template-areas: "name email" "subject subject" "message message" ". submit";
-    column-gap: 1em;
-  }
-
-  form .name {
-    grid-area: name;
-  }
-
-  form .email {
-    grid-area: email;
-  }
-
-  form .subject {
-    grid-area: subject;
-  }
-
-  form .message {
-    grid-area: message;
-  }
-
-  form .submit {
-    grid-area: submit;
-  }
-
-  .contact form label:not(:first-of-type) {
-    margin-top: 0px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .contact form {
-    margin: 0 32rem;
-    display: grid;
-    grid-template-areas: "name email" "subject subject" "message message" ". submit";
-    column-gap: 1em;
-  }
-}
 .footer {
   width: 100%;
   height: 120px;
@@ -980,6 +939,7 @@ textarea {
   justify-content: center;
   align-content: center;
   text-align: center;
+  grid-column: left/-right;
 }
 
 .footer .social-icons {
@@ -1018,4 +978,96 @@ textarea {
   color: #569CD6;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*
+1920x1080
+1536x864
+1366x768
+414x896
+360x800
+360x640
+*/
+@media screen and (min-width: 480px) {
+  .welcome .greeting h1 {
+    font-size: 4rem;
+  }
+
+  .welcome .greeting h2 {
+    font-size: 3rem;
+  }
+
+  .cta .profile .profile-icon {
+    height: 262px;
+    width: 262px;
+  }
+
+  .cta .profile h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta .profile h2 {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .projects {
+    grid-template-areas: "primary primary" "primary primary";
+    grid-template-columns: repeat(4, 25vw);
+    grid-auto-rows: 25vw;
+  }
+
+  .project, .project img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-areas: "left center right";
+  }
+
+  .contact h1, .contact-form {
+    grid-column: center;
+  }
+
+  .contact-form {
+    display: grid;
+    margin: 0;
+    grid-template-columns: auto;
+    grid-row: 2;
+  }
+
+  .project .project__caption .project__title {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  }
+
+  .project--primary .project__caption .project__title {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .project--primary .project__caption .project__description {
+    top: 30%;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects {
+    margin: 0 1rem;
+    width: calc(100% - 3vw);
+    grid-template-columns: repeat(4, 24.25vw);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact, .cta {
+    grid-template-columns: 30% 1fr 30%;
+  }
+}

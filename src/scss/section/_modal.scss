@@ -1,0 +1,155 @@
+.portfolio-modal{
+    position: fixed;
+    font-size: 14px;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    background: rgba($color: $color-white, $alpha: 1);
+    box-shadow: 0 0 0 3rem rgba($color-black, 0.5);
+    z-index: 5;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;      
+}
+.portfolio-modal.modal-open{
+    display: block;
+    
+}
+.portfolio-modal .text-image img {
+    width: 50%;
+    float: right;
+    clear: left;
+    margin-left: 1%;
+    
+}
+
+.portfolio-modal .image-text img {
+    width: 50%;
+    float: left;
+    clear: right;
+}
+
+svg.close-modal{
+    // background: $color-white;
+    position: fixed;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    // padding:.25em;
+    // border-radius: 50%;
+    
+    }
+
+.portfolio-modal .container{
+    position: fixed;
+    margin: 1rem 1rem;
+    display: flex;
+    flex-direction: column;    
+    
+    width: calc(100% - 4rem);
+    height: calc(100vh - 4rem);
+    overflow-y: hidden;
+    
+    
+}
+.project-title, .project-image, .project-summary, .portfolio-modal p{
+    margin: 0 1em;
+
+}
+.portfolio-modal .project-title{
+    
+
+}
+.portfolio-modal .project-image{
+    margin-left: -1rem;
+    width: calc(100vw - 2rem) !important;
+    height: 20vh !important;
+    object-fit: cover;
+
+}
+.portfolio-modal .project-summary{
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.about .portfolio-modal{
+    display: none;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+    "title title title"
+    "search search-icon filter"
+    "resume-items resume-items resume-items";
+    background: $color-bg;
+}
+
+.about .portfolio-modal.modal-open {
+    display: grid;
+}
+.about .portfolio-modal .project__title {
+    grid-column: title/title;
+    height: min-content;
+}
+.about .portfolio-modal .project__search {
+    display: flex;
+    flex-direction: row;
+    
+    height: min-content;
+    // margin-right: .5rem;
+    margin: 0 1rem;
+}
+.about .portfolio-modal .project__search--icon {
+    font-size: 20px;
+}
+.about .portfolio-modal .project__search--input {
+    margin-right: .5rem;
+    flex-basis: 100%;
+}
+.about .portfolio-modal .project__filter {
+    grid-column: filter/filter;
+    height: min-content;
+    width: min-content;
+    font-size: 20px;
+    padding: 0 1rem;
+}
+.about .portfolio-modal .resume-items {
+    grid-column: resume-items/resume-items;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    border: black solid 2px;
+    height: min-content;
+    padding: 1rem;
+    width: calc(100% - 4rem);
+    margin: .25rem 1rem;
+    
+    
+}
+
+
+.resume-items .resume__card{
+    background: $color-text-accent;
+    margin: 0;
+    width: min-content;
+    height: min-content;
+    color: $color-white;
+    border: 3px solid darken($color: $color-text-accent, $amount: 15);
+    border-radius: .5rem;
+}
+
+.resume-items .resume__role {
+    margin-bottom: 2rem;
+    font-size: 18px;
+}
+
+.resume-items .resume__role::after {
+    content: ' ';
+    margin-top: 4rem;
+    border-bottom: $color-white solid 2px;
+}
+

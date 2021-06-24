@@ -6,42 +6,36 @@
 
 .cta{
     display: grid;    
-    margin-top: 0px;
+    grid-column: 1/-1;
+    margin-top: 0;
     width: 100%;   
-    height: 60vh; 
+    height: max-content; 
     background: transparent;
     justify-content: center;
     text-align: center;
     
     grid-template-areas: 
-    "figma profile vscode";
+    "left center right";
+    grid-template-columns: 20% 1fr 20%;
 }
-
-.cta img{
+.cta img {
     object-fit: cover;
-    height: 60vh;
-    
-}
-.figma, .vscode{
-    width: calc(100%);
-    display: grid;
-}
-.figma img{
-    
-    grid-area: figma;    
+    position: relative;
+    top: 0;
+    bottom: 0;
     width: 100%;
+    height: 100%;
 }
-.vscode img{    
-    grid-area: vscode;
-    width: 100%;
+.cta .cta__left{  
+    grid-area: left;    
 }
-
+.cta .cta__right{    
+    grid-area: right;    
+}
 .cta .profile{
     padding: 0 5vw;    
     align-self: center;
 }
-
-
 .cta .profile-icon{
     justify-self: center;
     height: 131px;
