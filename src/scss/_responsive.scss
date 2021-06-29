@@ -8,8 +8,44 @@
 */
 
 
+
+
 // 480px, 768px, 1024px, and 1280px
 @include mq(480px){
+    
+    .navigation-button {
+        visibility: hidden;
+    }
+
+    nav{
+        transform: translateX(0);
+        grid-row: 1;
+
+        height: 10vh;
+        
+        width: 100%;
+
+    }
+    
+    nav .page-links{
+        flex-direction: row;        
+        align-items: center;    
+        height: auto;
+    }
+
+    nav .page-links a{
+        padding: 0;
+        height: 10vh;
+        line-height: 10vh;
+    }
+
+    nav .page-links > a:not(:last-of-type){
+        border-bottom: none;
+        border-right: black solid 1px;
+    }
+
+
+    
     .welcome .greeting h1{
        font-size: 4rem; 
     }
@@ -49,10 +85,23 @@
 
 }
 
-@include mq(768px){
+@include mq(768px){    
+    nav{
+        transform: translateX(0);
+        height: 5vh;
+        width: 100%;
+    }
+    
+    nav .page-links a{
+        padding: 0;
+        height: 5vh;
+        line-height: 5vh;
+    }
+
+
     .contact{
         display: grid;    
-        grid-column: 1/-1;
+        grid-column: left/-right;
         grid-template-rows: auto 1fr;
         grid-template-columns: 20% 1fr 20%;
         grid-template-areas: 
@@ -87,6 +136,19 @@
 }
 
 @include mq(1024px){
+    nav{
+
+        transform: translateX(0);
+        height: 5vh;
+        width: 100%;
+    }
+    
+    nav .page-links a{
+        padding: 0;
+        height: 5vh;
+        line-height: 5vh;
+    }
+    
     .projects{
         margin: 0 1rem;
         width: calc(100% - 3vw);
@@ -96,6 +158,18 @@
 }
 
 @include mq(1280px){
+    nav{
+
+        transform: translateX(0);
+        height: 5vh;
+        width: 100%;
+    }
+    
+    nav .page-links a{
+        padding: 0;
+        height: 5vh;
+        line-height: 5vh;
+    }
     .contact,.cta {
         grid-template-columns: 30% 1fr 30%;
     }
@@ -104,8 +178,30 @@
 }
 //1280px, 1440px, and 1920px.
 @include mq(1440px){
+    nav{
+
+        transform: translateX(0);
+        height: 5vh;
+        width: 100%;
+    }
     
+    nav .page-links a{
+        padding: 0;
+        height: 5vh;
+        line-height: 5vh;
+    }
 }
 @include mq(1920px){
+    nav{
 
+        transform: translateX(0);
+        height: 5vh;
+        width: 100%;
+    }
+    
+    nav .page-links a{
+        padding: 0;
+        height: 5vh;
+        line-height: 5vh;
+    }
 }

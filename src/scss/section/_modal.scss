@@ -5,12 +5,12 @@
     bottom: 2em;
     left: 2em;
     right: 2em;
-    background: rgba($color: $color-white, $alpha: 1);
-    box-shadow: 0 0 0 3rem rgba($color-black, 0.5);
+    background: var(--color-fg);    
     z-index: 5;
     overflow-y: scroll;
     overflow-x: hidden;
-    display: none;      
+    display: none;     
+    color: white; 
 }
 .portfolio-modal.modal-open{
     display: block;
@@ -31,18 +31,25 @@
 }
 
 svg.close-modal{
-    // background: $color-white;
+    // background: rgb(var(--color-white));
     position: fixed;
     top: 1em;
     bottom: 1em;
     left: 1em;
     right: 1em;
-    // padding:.25em;
-    // border-radius: 50%;
+    stroke: var(--color-fg);
+    stroke-width: 2;
+    height: 32;
+    width: 32;
+
     
     }
+    svg.close-modal circle {
+        fill:var(--color-inverted);
+        stroke:none;
+    }
 
-.portfolio-modal .container{
+.portfolio-modal .container {
     position: fixed;
     margin: 1rem 1rem;
     display: flex;
@@ -54,27 +61,28 @@ svg.close-modal{
     
     
 }
-.project-title, .project-image, .project-summary, .portfolio-modal p{
+.project__title, .project__image, .project__summary, .portfolio__modal p {
     margin: 0 1em;
 
 }
-.portfolio-modal .project-title{
+// .portfolio-modal .project__title{
     
 
-}
-.portfolio-modal .project-image{
+// }
+.portfolio-modal .project__image{
     margin-left: -1rem;
-    width: calc(100vw - 2rem) !important;
-    height: 20vh !important;
+    width: calc(100vw - 2rem);
+    height: 20vh;
     object-fit: cover;
 
 }
-.portfolio-modal .project-summary{
+.portfolio-modal .project__summary{
     margin-bottom: 1rem;
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
+    color: var(--color-inverted);
+}
 
 .about .portfolio-modal{
     display: none;
@@ -84,7 +92,7 @@ svg.close-modal{
     "title title title"
     "search search-icon filter"
     "resume-items resume-items resume-items";
-    background: $color-bg;
+    background: var(--color-bg);
 }
 
 .about .portfolio-modal.modal-open {
@@ -133,12 +141,12 @@ svg.close-modal{
 
 
 .resume-items .resume__card{
-    background: $color-text-accent;
+    background: var(--color-fg);
     margin: 0;
     width: min-content;
     height: min-content;
-    color: $color-white;
-    border: 3px solid darken($color: $color-text-accent, $amount: 15);
+    color: var(--color-white);
+    border: 3px solid var(--color-fg);
     border-radius: .5rem;
 }
 
@@ -150,6 +158,6 @@ svg.close-modal{
 .resume-items .resume__role::after {
     content: ' ';
     margin-top: 4rem;
-    border-bottom: $color-white solid 2px;
+    border-bottom: var(--color-bg) solid 2px;
 }
 

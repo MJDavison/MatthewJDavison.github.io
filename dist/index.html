@@ -36,12 +36,18 @@
     </nav>
 
     <section class="welcome" aria-label="Introduction" tabindex="0">
-        <div class="greeting">
+        <!-- <div class="greeting">
             <h2>Welcome to my</h2>
             <h1>Portfolio</h1>
+        </div> -->
+
+        <div class="profile">
+            <div class="profile-icon"></div>
+            <h3>Hi! My name is</h3>
+            <h2>Matthew Davison</h2>
         </div>
 
-        <span class="down-pointer">
+        <a href="#home" class="down-pointer">
             <svg width="18.5" height="30.5" viewBox="0 0 18.5 30.5">
                 <g transform="matrix(3.8 0 0 3.8 3.4e-7 0)">
                     <ellipse class="class1" cx="2.4" cy="4" rx="2.2" ry="3.8" />
@@ -52,26 +58,16 @@
                     </g>
                 </g>
             </svg>
-        </span>
+        </a>
     </section>
 
     <section class="cta" aria-label="Call To Action" id="home"  tabindex="0">
-        <img class="cta__left" src="/img/CTA/Figma Design.jpg" alt="Image of Figma">
-        <!-- <div class="figma">
-            Photo by <a href="https://unsplash.com/@olafval?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Olaf Val</a> on <a href="https://unsplash.com/s/photos/figma?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </div> -->
-        <div class="profile">
-            <div class="profile-icon"></div>
-            <h3>Hi! My name is</h3>
-            <h2>Matthew Davison</h2>
-        </div>
-        <img class="cta__right" src="/img/CTA/VSCode code.jpg" alt="Image of VSCode">
-        <!-- <div class="vscode">
-           <p>Photo by <a href="https://unsplash.com/@davidschultz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Schultz</a> on <a href="https://unsplash.com/s/photos/vscode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>"</p>
-        </div> -->
-
-        <!-- <h1 class="left">Design</h1>
-        <h1 class="right">code {;}</h1> -->
+        <h1>Struggle, Persevere, Conquer.</h1>
+        <p class="quote">
+            Regardless of the task or the challenges that come with it, if you struggle and persevere, you’ll eventually conquer any goal.
+        </p>
+        <p class="ending-statement">This is who I am.</p>
+        <a href="" class="cta_button">Hire Me</a>
 
     </section>
     
@@ -102,6 +98,9 @@
             back in Primary School and since then, I’ve played around with creating various apps, websites, games and
             software. <br><br>
 
+            > $matthew.Hire <br>
+            Fancy hiring me? Check out my resumes and my CV! <br><br>
+
             > $matthew.CV <br>
             <a href="#" download="Matthew Davison CV" aria-label="Click here to download my CV!"> Click
                 here</a> to download my CV!<br><br>
@@ -116,8 +115,8 @@
         </samp>
 
         <div class="portfolio-modal">
-            <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+            <svg class="close-modal">
+                <circle cx="15" cy="15" r="14" />
                 <line x1="7" y1="7" x2="23" y2="23" />
                 <line x1="23" y1="7" x2="7" y2="23" />
             </svg>
@@ -164,20 +163,19 @@
     <section class="portfolio" aria-label="Portfolio" id="portfolio" tabindex="0">
         <h1>My Portfolio</h1>
         <div class="projects" aria-label="Portfolio Items">
-            <figure class="project project--primary" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/primary-portfolio.jpg" alt="a pair of glasses on a closed laptop">                
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Personal Website</h3>
-                    <p class="project__description" id="description">In short... this project was creating the website
-                        you're currently browsing!</p>
+            <figure class="project project--dark" tabindex="0">
+                <img class="project__image project__image--primary" src="/img/869-960x960.jpg" alt="a pair of glasses on a closed laptop">                
+                <figcaption class="project__caption">
+                    <h3 class="project__title">Personal Website</h3>
+                    <p class="project__description">
+                        In short... this project was creating the website you're currently browsing!
+                    </p>
                     <a class="project__link">Read More</a>
-                </figcaption>
-
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
+                </figcaption>                
 
                 <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+                    <svg class="close-modal">
+                        <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
@@ -192,8 +190,9 @@
 
                 </div>
             </figure>
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
+                
+            <figure class="project project--light" tabindex="0">
+                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                     alt="The login screen for my Issue Tracker Project">
                     
                 <figcaption class="project__caption project__caption--active">
@@ -203,11 +202,11 @@
                         integration etc</p>
                     <a class="project__link">Read More</a>
                 </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
+                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
 
                 <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+                    <svg class="close-modal">
+                        <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
@@ -216,7 +215,7 @@
                     <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
                         would expect from a issue tracker, it includes issue management, database integration etc</p>
                     <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -225,7 +224,7 @@
                             as sections, articles etc).</p>
                     </div>
                     <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -234,10 +233,9 @@
                             as sections, articles etc).</p>
                     </div>
                 </div>
-            </figure>            
-            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
+            </figure>     
+            <figure class="project project--light" tabindex="0">
+                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                     alt="The login screen for my Issue Tracker Project">
                     
                 <figcaption class="project__caption project__caption--active">
@@ -247,11 +245,11 @@
                         integration etc</p>
                     <a class="project__link">Read More</a>
                 </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
+                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
 
                 <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+                    <svg class="close-modal">
+                        <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
@@ -260,7 +258,7 @@
                     <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
                         would expect from a issue tracker, it includes issue management, database integration etc</p>
                     <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -269,7 +267,7 @@
                             as sections, articles etc).</p>
                     </div>
                     <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -278,9 +276,9 @@
                             as sections, articles etc).</p>
                     </div>
                 </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
+            </figure>    
+            <figure class="project project--light" tabindex="0">
+                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                     alt="The login screen for my Issue Tracker Project">
                     
                 <figcaption class="project__caption project__caption--active">
@@ -290,11 +288,11 @@
                         integration etc</p>
                     <a class="project__link">Read More</a>
                 </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
+                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
 
                 <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+                    <svg class="close-modal">
+                        <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
@@ -303,7 +301,7 @@
                     <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
                         would expect from a issue tracker, it includes issue management, database integration etc</p>
                     <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -312,7 +310,7 @@
                             as sections, articles etc).</p>
                     </div>
                     <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -321,9 +319,9 @@
                             as sections, articles etc).</p>
                     </div>
                 </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
+            </figure>    
+            <figure class="project project--light" tabindex="0">
+                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                     alt="The login screen for my Issue Tracker Project">
                     
                 <figcaption class="project__caption project__caption--active">
@@ -333,11 +331,11 @@
                         integration etc</p>
                     <a class="project__link">Read More</a>
                 </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
+                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
 
                 <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
+                    <svg class="close-modal">
+                        <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
@@ -346,7 +344,7 @@
                     <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
                         would expect from a issue tracker, it includes issue management, database integration etc</p>
                     <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -355,7 +353,7 @@
                             as sections, articles etc).</p>
                     </div>
                     <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
+                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
@@ -364,351 +362,7 @@
                             as sections, articles etc).</p>
                     </div>
                 </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
-            <figure class="project" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/Login Screen.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption>
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal" width="32" height="32" stroke="black" stroke-width="2">
-                        <circle cx="15" cy="15" r="14" fill="white" stroke="none" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/Login Screen.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>            
+            </figure>         
         </div>
     </section>
     <section class="contact" aria-label="Contact Me" id="contact"  tabindex="0">
@@ -740,16 +394,16 @@
         <span class="copyright">&copy;Copyright 2022 Matthew Davison</span>
     </section>
 
-
-    <svg height="0px">
-        <symbol class="hamburger__svg" id="hamburger" aria-label="Hamburger icon" viewBox="0 0 25 12">
-            <line class="burger" x1="0" y1="6" x2="25" y2="6"/>
-            <line class="burger" x1="0" y1="0" x2="25" y2="0"/>
-            <line class="burger" x1="0" y1="12" x2="20" y2="12"/>        
-        </symbol>
+    <svg height="0px">        
+            <symbol class="hamburger__svg" id="hamburger" aria-label="Hamburger icon" viewBox="0 0 25 12">
+                <line class="burger" x1="0" y1="6" x2="25" y2="6"/>
+                <line class="burger" x1="0" y1="0" x2="25" y2="0"/>
+                <line class="burger" x1="0" y1="12" x2="20" y2="12"/>        
+            </symbol>    
     </svg>
 </body>
 <script src="js/index.js"></script>
+<!-- This was a test that I decided against using... <script src="js/projects.js"></script> -->
 <script src="js/modal.js"></script>
 
 </html>

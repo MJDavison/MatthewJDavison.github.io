@@ -8,6 +8,7 @@
     margin-left: 16px;
     margin-right: 16px;    
     grid-column: left/-right;
+    grid-row: 5;
     
 }
 .about samp::before{    
@@ -19,16 +20,19 @@
     width: 100%;
     text-align: center;    
     content: 'about - Visual Studio Code';
-    background: #252526;
+    // background: #252526;
+    background: var(--color-about-head);
+    --darken: 20%;   
     border-radius: 1rem 1rem 0 0;
     padding: .5rem 3rem;
 }
 .about samp{
     display: block;
-    background: #1E1E1E;
-    color: $color-white;
-    font-family: $font-ff-sourcecode;
-    font-weight: $font-fw-medium;
+    // background: #1E1E1E;
+    background: var(--color-fg);
+    color: var(--color-white-990);
+    font-family: var(--font-ff-sourcecode);
+    font-weight: var(--font-fw-medium);
     padding-bottom: 1.5rem;
     padding: 0 3rem 1.5rem;
 }

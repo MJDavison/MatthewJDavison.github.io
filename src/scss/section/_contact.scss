@@ -1,14 +1,16 @@
 .contact{
-  grid-column: 1/-1;
+  grid-column: left/-right;
+  grid-row: 6;
 }
 .contact-form{
   margin: auto 1rem;
+  display: grid;
 }
 
 
 .contact-form label {
-    display: block;
-  color: $color-white;
+  display: block;
+  color: var(--color-white-990);
   margin-bottom: 4px;
 }
 .contact-form label:not(:first-of-type) {
@@ -40,10 +42,11 @@ textarea {
   width: calc(100% / 2);
   height: 60px;
   justify-self: right;
-  background: #1c53b6;
-  color: white;
+  // background: #1c53b6;
+  background: rgb(var(--color-fg));
+  color: rgb(var(--color-white));
   font-size: 14px;
-  border: 1px solid #262626;
+  // border: 1px solid #262626;
   border-radius: 7px;
   margin: 32px 0;
 }

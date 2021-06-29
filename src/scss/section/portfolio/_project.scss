@@ -1,0 +1,62 @@
+.project, .project img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+    position: relative;
+    object-fit: contain;
+}
+
+.project {
+    background: var(--color-bg)
+}
+
+.project:hover img{
+    opacity: 0.7;
+}
+
+.project::before,
+.project::after{
+    content: '';
+    position: absolute;
+    @supports not (inset:0){
+        top: 1.25em;
+        bottom: 1.25em;
+        left: 1.25em;
+        right: 1.25em;
+    }
+    @supports (inset:0){
+        inset: 1.25em;
+    }
+    opacity: 1;
+    transition: transform ease-out 250ms;
+}
+
+.project::before{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0,1);
+
+}
+.project::after{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1,0);
+}
+.project:hover:before{
+    transform: scale(1.05,1);
+}
+.project:hover::after{
+    transform: scale(1,1.05);
+}
+
+.project__image{
+    transition: opacity ease-out 250ms
+}
+
+.project:hover .project__image {
+    opacity: 0.4;
+}
+
+@import "project__caption";

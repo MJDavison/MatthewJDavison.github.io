@@ -10,14 +10,15 @@ html, body{
     scroll-behavior: smooth;
 }
 body{
-    background: $color-bg;
+    background: var(--color-bg);
     display: grid;
     grid-template-columns: 20% 1fr 20%;
+    grid-template-rows:  0 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "left center right";
-    
-    
 }
+
+
 section{
     margin-top: 21px;
 }
@@ -27,9 +28,9 @@ p{
 }
 
 h1{
-    color: $color-text-section-header;
+    color: var(--color-accent-500);
     text-align: center;
     font-size: 49px;
     padding: 0;
-    margin: 0px 0px 34px 0px;
+    margin: 0 0 34px 0;
 }

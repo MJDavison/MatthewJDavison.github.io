@@ -1,23 +1,113 @@
-$color-bg:#333333;
-$color-text-regular: #CE9178;
-$color-text-section-header: #4EC9B0;
-$color-text-accent:#569CD6;
-$color-text-function:#DCDCAA;
-$color-button-border:#262626;
-$color-button:#303030;
-$color-white:#FFF;
-$color-black:#000;
+:root{
+
+    //Base Colours
+    /*White*/ 
+    
+    --color-independence: 231, 18%; // primary color
+    
+    --color-primary-500: hsl(231, 18%, 50%); 
+    --color-primary-350: hsl(231, 18%, 35%); 
+    --color-primary-300: hsl(231, 18%, 30%); 
+    --color-primary-250: hsl(231, 18%, 25%); 
+    
+    --color-primary-200: hsl(231, 18%, 20%); 
+    
+    --color-accent-500: hsl(166, 100%, 50%);
+
+
+    --color-deep-space-sparkle-520: hsl(198, 30%, 52%);
+    --color-deep-space-sparkle-320: hsl(198, 30%, 32%);
+    --color-deep-space-sparkle-120: hsl(198, 30%, 12%);
+    
+    
+    --color-charcoal-300: hsl(203, 14%, 30%);
+    --color-onyx-260: hsl(0, 0%, 26%);
+    --color-white-990: hsl(0, 0%, 99%);
+    --color-black-80: hsl(0, 0%, 8%);
+    --color-dim-gray-410: hsl(0, 0%, 41%);
+}
+body{
+    --color-bg: var(--color-white-990);
+    --color-button: var(--color-black-80);
+    --color-fg: var(--color-black-80);
+    --color-inverted: var(--color-white-990);
+    --color-about-head: 65, 65, 65;
+
+    --color-brand-github: var(--color-black-80);
+    --color-brand-twitter: hsl(204, 88%, 53%);
+    --color-brand-dribbble:  hsl(0, 0%, 27%);
+
+}
+
+body.dark-mode{
+    --color-bg: var(--color-primary-200);
+    --color-button: 255, 255, 255;
+    --color-fg: 255, 255, 255;
+    --color-inverted: 0, 0, 0;
+    --color-about-head: var(--color-independence);
+
+    --color-brand-github: var(--color-white-990);
+    --color-brand-twitter: var(--color-white-990);
+    --color-brand-dribbble: var(--color-white-990);
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        --color-bg: var(--color-primary-200);
+        --color-button: var(--color-black-80);
+        --color-fg: var(--color-black-80);
+        --color-inverted: var(--color-white-990);
+        --color-about-head: 65, 65, 65;
+
+        --color-brand-github: var(--color-white-990);
+        --color-brand-twitter: var(--color-white-990);
+        --color-brand-dribbble: var(--color-white-990);
+
+    }
+
+    body.light-mode{
+        --color-bg: var(--color-white-990);
+        --color-button: 0, 0, 0;
+        --color-fg: 0, 0, 0;
+        --color-inverted: 255, 255, 255;
+        
+        --color-about-head: 65, 65, 65;  
+       
+        --color-brand-github: var(--color-black-80);
+        --color-brand-twitter: hsl(204, 88%, 53%);
+        --color-brand-dribbble: var(--color-white-990);
+        
+    }   
+}
+// $color-bg:#333333;
+// $color-text-regular: #CE9178;
+// $color-text-section-header: #4EC9B0;
+// $color-text-accent:#569CD6;
+// $color-text-function:#DCDCAA;
+// $color-button-border:#262626;
+// $color-button:#303030;
+// $color-white:#FFF;
+// $color-black:#000;
 
 $font-ff-poppins:"Poppins", sans-serif;
 $font-ff-sourcecode:"Source Code Pro", monospace;
+$font-ff-oxanium:'Oxanium', cursive;
+$font-ff-font-awesome-free:'Font Awesome 5 Free';
 
-//Used with Poppins
+
 $font-fw-thin:100;
+$font-fw-extralight:200;
+$font-fw-light:300;
 $font-fw-regular:400;
-$font-fw-bold:700;
-
-//Used with SourceCodePro
 $font-fw-medium:500;
+$font-fw-semibold:600;
+$font-fw-bold:700;
+$font-fw-extrabold:800;
+$font-fw-black:900;
+
+
+
+
 
 $font-fs-italic: italic;
 $font-fs-normal: normal;

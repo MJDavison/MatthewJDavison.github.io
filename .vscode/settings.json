@@ -14,7 +14,13 @@
     "svg.preview.background": "custom",
     "liveServer.settings.root": "/dist",
     "scss.lint.important": "error",
-    "scss.lint.importStatement": "error",
     "scss.lint.zeroUnits": "warning",
     
+    
+    "cssVariables.lookupFiles": [
+        "node_modules/common-ui/dist/CommonUIVariable.css",
+        "src/scss/_variables.scss"
+    ],
+    "scss.lint.duplicateProperties": "warning"
+
 }
