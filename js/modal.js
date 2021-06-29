@@ -1,21 +1,37 @@
-const portfolioItems = document.querySelector('.projects');
-const resumesLink = document.querySelector('#resumesLink')
+const portfolioItems = document.querySelector(".projects");
+const resumesLink = document.querySelector("#resumesLink");
 var closeButton;
+let modalOpen = false;
 function openModal(e) {
     e.preventDefault();
-    const modalToggle = e.target.closest('.project__link');
-    if (!modalToggle) return;    
-    let parent = modalToggle.parentNode;    
-    let modal = parent.nextElementSibling.nextElementSibling;
-    modal.classList.add('modal-open');    
-    document.body.style.overflowY="hidden";
-    document.body.tabIndex=-"1";    
-    closeButton = modal.childNodes[1];
-    closeButton.addEventListener("click", _ => {
-        modal.classList.remove('modal-open');
-        document.body.style.overflowY="visible";
-        document.body.tabIndex="0";
+    if (!modalOpen) {
+    const caption = e.target.querySelector(".project__caption");
+    if (!caption) return;
+    const modalToggle = caption.querySelector(".project__link");    
+    if (!modalToggle) return;
+
+    let modal = caption.nextElementSibling;
+    console.log(modal);
+    modal.classList.add("modal-open");
+    modalOpen = true;
+    document.body.style.overflowY = "hidden";
+    document.body.tabIndex = -"1";
+
+    closeButton = modal.querySelector('.close-modal');
+    closeButton.addEventListener("click", (_) => {
+      
+      modal.classList.remove("modal-open");
+      document.body.style.overflowY = "visible";
+      document.body.tabIndex = "0";
+      modalOpen = false;
     });
+  }
+  else{
+      console.log(modalOpen);
+  }
 }
-portfolioItems.addEventListener("click", e => openModal(e));
-resumesLink.addEventListener("click", e => openModal(e));
+
+portfolioItems.addEventListener("click", (e) => openModal(e));
+resumesLink.addEventListener("click", (e) => openModal(e));
+
+// console.log(portfolioItems);

@@ -12,15 +12,13 @@ navigationButton.addEventListener("click", _ => toggleNav());
 
 const cta__sec = cta_section.getBoundingClientRect().top - 15-12;
 
-console.log(document);
-
 document.body.addEventListener("scroll", _ => {
-    console.log("Test");
-    console.log(document.body.scrollTop);
-    console.log(cta__sec);
+    // console.log("Test");
+    // console.log(document.body.scrollTop);
+    // console.log(cta__sec);
     if(document.body.scrollTop >= cta__sec){
         nav__svg.style="stroke:white";
-        console.log(nav__svg.style);
+        //console.log(nav__svg.style);
         
     } else{
         nav__svg.style="stroke:black";
