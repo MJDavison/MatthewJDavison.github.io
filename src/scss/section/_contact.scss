@@ -10,7 +10,7 @@
 
 .contact-form label {
   display: block;
-  color: var(--color-white-990);
+  color: var(--clr-white);
   margin-bottom: 4px;
 }
 .contact-form label:not(:first-of-type) {
@@ -43,8 +43,8 @@ textarea {
   height: 60px;
   justify-self: right;
   // background: #1c53b6;
-  background: rgb(var(--color-fg));
-  color: rgb(var(--color-white));
+  background: var(--color-fg);
+  color: var(--clr-white);
   font-size: 14px;
   // border: 1px solid #262626;
   border-radius: 7px;

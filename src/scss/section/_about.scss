@@ -21,7 +21,7 @@
     text-align: center;    
     content: 'about - Visual Studio Code';
     // background: #252526;
-    background: var(--color-about-head);
+    background: var(--clr-about-head);
     --darken: 20%;   
     border-radius: 1rem 1rem 0 0;
     padding: .5rem 3rem;
@@ -29,8 +29,8 @@
 .about samp{
     display: block;
     // background: #1E1E1E;
-    background: var(--color-fg);
-    color: var(--color-white-990);
+    background: var(--clr-about-body);
+    color: var(--clr-white);
     font-family: var(--font-ff-sourcecode);
     font-weight: var(--font-fw-medium);
     padding-bottom: 1.5rem;

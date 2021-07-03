@@ -31,7 +31,8 @@ section.welcome {
 .welcome .profile-icon {
     height: 131px;
     width: 131px;
-    background: url(/img/profile-icon.png), var(--color-fg);
+    $bg: var(--clr-primary-200);
+    background: url(/img/profile-icon.png), invert-colour(map-get($dark-vars, clr-primary-200));
     background-position-x:5px;
     background-size: contain;
     border-radius: 50%;
@@ -47,7 +48,7 @@ section.welcome {
     font-size: 1.25rem;
     font-weight: $font-fw-semibold;
     font-family: $font-ff-poppins;
-    color: var(--color-white-990);
+    color: var(--clr-white);
     margin: 0;
     padding: 0;
 }
@@ -56,20 +57,20 @@ section.welcome {
     font-size: 3rem;
     font-weight: $font-fw-semibold;
     font-family: $font-ff-poppins;
-    color: var(--color-accent-500);
+    color: var(--clr-accent-500);
     margin: 0;
     padding: 0;   
 }
 
 .welcome .down-pointer{
     display: block;
-    fill: var(--color-white-990);    
+    fill: var(--clr-white);   
     height: min-content;
     margin-bottom: 2rem;
 }
 .down-pointer ellipse{    
     fill: none;
-    stroke: var(--color-white-990);
+    stroke: var(--clr-white);
     stroke-width: 0.4px;
 }
 .welcome .down-pointer svg{

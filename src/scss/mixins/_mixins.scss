@@ -4,4 +4,10 @@
     }
 }
 
-
+@function invert-colour($color){
+    @if(lightness($color) <= 51){
+       @return hsl(0, 0%, 100%);
+    }@else{
+        @return hsl(0, 0%, 0%);
+    }
+}

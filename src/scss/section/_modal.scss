@@ -10,7 +10,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;     
-    color: white; 
+    color: var(--clr-white);
 }
 .portfolio-modal.modal-open{
     display: block;
@@ -37,7 +37,7 @@ svg.close-modal{
     bottom: 1em;
     left: 1em;
     right: 1em;
-    stroke: var(--color-fg);
+    stroke: var(--clr-black);
     stroke-width: 2;
     height: 32;
     width: 32;
@@ -45,7 +45,7 @@ svg.close-modal{
     
     }
     svg.close-modal circle {
-        fill:var(--color-inverted);
+        fill:var(--clr-white);
         stroke:none;
     }
 
@@ -92,7 +92,7 @@ svg.close-modal{
     "title title title"
     "search search-icon filter"
     "resume-items resume-items resume-items";
-    background: var(--color-bg);
+    background: var(--clr-primary-200);
 }
 
 .about .portfolio-modal.modal-open {
@@ -129,35 +129,46 @@ svg.close-modal{
     display: grid;
     
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    border: black solid 2px;
+    column-gap: 10px ;
+    row-gap: 10px;
+    // border: black solid 2px;
     height: min-content;
-    padding: 1rem;
     width: calc(100% - 4rem);
-    margin: .25rem 1rem;
+    margin: .25rem 15px;
     
     
 }
 
 
-.resume-items .resume__card{
-    background: var(--color-fg);
+.resume-items .resume__card{    
+    background: var(--clr-primary-300);
     margin: 0;
-    width: min-content;
-    height: min-content;
-    color: var(--color-white);
+    width: 8em;
+    height: 8em;
+    color: var(--clr-white);
     border: 3px solid var(--color-fg);
     border-radius: .5rem;
+    position: relative;
+}
+
+.resume-items .resume__card a{
+    position: absolute;
+    display: block;
+    height: inherit;
+    width: inherit;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .resume-items .resume__role {
-    margin-bottom: 2rem;
-    font-size: 18px;
-}
-
-.resume-items .resume__role::after {
-    content: ' ';
-    margin-top: 4rem;
-    border-bottom: var(--color-bg) solid 2px;
+    
+    font-size: 24px;
+    font-family: $font-ff-oxanium;
+    font-weight: $font-fw-semibold;
+    text-align: center;
+    line-height: initial;
+    color: var(--clr-white);
 }
 

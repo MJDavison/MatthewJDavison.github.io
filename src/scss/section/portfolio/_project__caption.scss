@@ -14,7 +14,7 @@
         inset: 1.25em;
     }
     opacity: 0;
-    transition: opacity ease-out 250ms;
+    transition: opacity ease-out 250ms;    
 }
 
 .project:hover .project__caption{
@@ -57,13 +57,15 @@
 
 .project__caption .project__link {
     bottom: 5%;
-    width: auto;
-    text-align: left;
-    left: 5%;
-    right: 5%;
-    padding: .2em 0;
-    background: rgb(var(--color-button));
-    color: rgb(var(--color-white));
+    width: max-content;
+    position: absolute;
+    
+    // margin: 0 0.5em 0 auto;
+    // padding: .2em .25em;
+    // border-radius: 10px;
+    // background: var(--clr-white);
+    color: var(--clr-white);    
+    text-decoration: underline;
 }
 
 // ##################################################################### //

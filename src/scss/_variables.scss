@@ -1,81 +1,110 @@
+$light-vars:(  
+    // clr-primary-500: hsl(232, 78%, 9%), 
+    // clr-primary-350: hsl(231, 18%, 35%), 
+    // clr-primary-300: hsl(231, 18%, 30%), 
+    // clr-primary-250: hsl(231, 18%, 25%), 
+    // clr-primary-200: hsl(231, 18%, 20%), 
+    
+    // clr-accent-500: hsl(166, 100%, 50%),
+
+    // clr-secondary-520: hsl(198, 30%, 52%),
+    // clr-secondary-320: hsl(198, 30%, 32%),
+    // clr-secondary-120: hsl(198, 30%, 12%),
+
+    // clr-white: hsl(0, 0%, 99%),
+    // clr-black: hsl(0, 0%, 8%),
+    // clr-dim-gray: hsl(0, 0%, 41%),
+    // clr-brand-github: hsl(0,0%,0%),
+    // clr-brand-twitter: hsl(204, 88%, 53%),
+    // clr-brand-dribbble:  hsl(0, 0%, 27%),
+
+    // clr-about-body: hsl(231, 18%, 35%),
+    // clr-about-head: hsl(231, 18%, 30%)
+
+    clr-primary-500: hsl(231, 18%, 50%), 
+    clr-primary-350: hsl(231, 18%, 35%), 
+    clr-primary-300: hsl(231, 18%, 30%), 
+    clr-primary-250: hsl(231, 18%, 25%), 
+    clr-primary-200: hsl(231, 18%, 20%), 
+    
+    clr-accent-500: hsl(166, 100%, 50%),
+
+    clr-secondary-520: hsl(198, 30%, 52%),
+    clr-secondary-320: hsl(198, 30%, 32%),
+    clr-secondary-120: hsl(198, 30%, 12%),
+
+    clr-white: hsl(0, 0%, 99%),
+    clr-black: hsl(0, 0%, 8%),
+    clr-dim-gray: hsl(0, 0%, 41%),
+    clr-brand-github: hsl(0, 0%, 100%),
+    clr-brand-twitter: hsl(0, 0%, 100%),
+    clr-brand-dribbble:  hsl(0, 0%, 100%),
+
+    clr-about-body: hsl(231, 18%, 35%),
+    clr-about-head: hsl(231, 18%, 30%)
+);
+    
+$dark-vars:(  
+    clr-primary-500: hsl(231, 18%, 50%), 
+    clr-primary-350: hsl(231, 18%, 35%), 
+    clr-primary-300: hsl(231, 18%, 30%), 
+    clr-primary-250: hsl(231, 18%, 25%), 
+    clr-primary-200: hsl(231, 18%, 20%), 
+    
+    clr-accent-500: hsl(166, 100%, 50%),
+
+    clr-secondary-520: hsl(198, 30%, 52%),
+    clr-secondary-320: hsl(198, 30%, 32%),
+    clr-secondary-120: hsl(198, 30%, 12%),
+
+    clr-white: hsl(0, 0%, 99%),
+    clr-black: hsl(0, 0%, 8%),
+    clr-dim-gray: hsl(0, 0%, 41%),
+    clr-brand-github: hsl(0, 0%, 100%),
+    clr-brand-twitter: hsl(0, 0%, 100%),
+    clr-brand-dribbble:  hsl(0, 0%, 100%),
+
+    clr-about-body: hsl(231, 18%, 35%),
+    clr-about-head: hsl(231, 18%, 30%)
+    );
+
+    
+
+
+    
+
+    @mixin vars($name, $value) {
+        #{$name}: map-get($light-vars, $value);
+        #{$name}: var(--#{$value});
+    }
 :root{
-
-    //Base Colours
-    /*White*/ 
+    @each $property, $value in $light-vars {
+        --#{$property}: #{$value};
+    }
     
-    --color-independence: 231, 18%; // primary color
     
-    --color-primary-500: hsl(231, 18%, 50%); 
-    --color-primary-350: hsl(231, 18%, 35%); 
-    --color-primary-300: hsl(231, 18%, 30%); 
-    --color-primary-250: hsl(231, 18%, 25%); 
-    
-    --color-primary-200: hsl(231, 18%, 20%); 
-    
-    --color-accent-500: hsl(166, 100%, 50%);
 
 
-    --color-deep-space-sparkle-520: hsl(198, 30%, 52%);
-    --color-deep-space-sparkle-320: hsl(198, 30%, 32%);
-    --color-deep-space-sparkle-120: hsl(198, 30%, 12%);
-    
-    
-    --color-charcoal-300: hsl(203, 14%, 30%);
-    --color-onyx-260: hsl(0, 0%, 26%);
-    --color-white-990: hsl(0, 0%, 99%);
-    --color-black-80: hsl(0, 0%, 8%);
-    --color-dim-gray-410: hsl(0, 0%, 41%);
-}
-body{
-    --color-bg: var(--color-white-990);
-    --color-button: var(--color-black-80);
-    --color-fg: var(--color-black-80);
-    --color-inverted: var(--color-white-990);
-    --color-about-head: 65, 65, 65;
-
-    --color-brand-github: var(--color-black-80);
-    --color-brand-twitter: hsl(204, 88%, 53%);
-    --color-brand-dribbble:  hsl(0, 0%, 27%);
 
 }
-
-body.dark-mode{
-    --color-bg: var(--color-primary-200);
-    --color-button: 255, 255, 255;
-    --color-fg: 255, 255, 255;
-    --color-inverted: 0, 0, 0;
-    --color-about-head: var(--color-independence);
-
-    --color-brand-github: var(--color-white-990);
-    --color-brand-twitter: var(--color-white-990);
-    --color-brand-dribbble: var(--color-white-990);
+:root.dark-mode{
+    @each $property, $value in $dark-vars {
+        --#{$property}: #{$value};
+    }
 }
 
 @media (prefers-color-scheme: dark){
-    body {
-        --color-bg: var(--color-primary-200);
-        --color-button: var(--color-black-80);
-        --color-fg: var(--color-black-80);
-        --color-inverted: var(--color-white-990);
-        --color-about-head: 65, 65, 65;
-
-        --color-brand-github: var(--color-white-990);
-        --color-brand-twitter: var(--color-white-990);
-        --color-brand-dribbble: var(--color-white-990);
+    :root {
+        @each $property, $value in $dark-vars {
+            --#{$property}: #{$value};
+        }
 
     }
 
-    body.light-mode{
-        --color-bg: var(--color-white-990);
-        --color-button: 0, 0, 0;
-        --color-fg: 0, 0, 0;
-        --color-inverted: 255, 255, 255;
-        
-        --color-about-head: 65, 65, 65;  
-       
-        --color-brand-github: var(--color-black-80);
-        --color-brand-twitter: hsl(204, 88%, 53%);
-        --color-brand-dribbble: var(--color-white-990);
+    :root.light-mode{
+        @each $property, $value in $light-vars {
+            --#{$property}: #{$value};
+        }
         
     }   
 }
@@ -116,3 +145,29 @@ $breakpoint-phone:688px;
 $breakpoint-tablet:992px;
 $breakpoint-screen:1312px;
 
+
+
+//Base Colours
+    /*White*/ 
+    
+    
+    // --color-charcoal-300: hsl(203, 14%, 30%),
+    // --color-onyx-260: hsl(0, 0%, 26%),
+    
+    //Light
+
+    // --color-bg: var(--color-white-990),
+    // --color-button: var(--color-black-80),
+    // --color-fg: var(--color-black-80),
+    // --color-inverted: var(--color-white-990),
+    // --color-about-head: 65, 65, 65,
+
+
+
+    //Dark
+
+    // --color-bg: var(--color-primary-200);
+    // --color-button: 255, 255, 255;
+    // --color-fg: 255, 255, 255;
+    // --color-inverted: 0, 0, 0;
+    // --color-about-head: var(--color-independence);
