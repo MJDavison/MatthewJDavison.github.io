@@ -344,69 +344,87 @@ template {
 }
 
 :root {
-  /*White*/
-  --color-independence: 231, 18%;
-  --color-primary-500: hsl(231, 18%, 50%);
-  --color-primary-350: hsl(231, 18%, 35%);
-  --color-primary-300: hsl(231, 18%, 30%);
-  --color-primary-250: hsl(231, 18%, 25%);
-  --color-primary-200: hsl(231, 18%, 20%);
-  --color-accent-500: hsl(166, 100%, 50%);
-  --color-deep-space-sparkle-520: hsl(198, 30%, 52%);
-  --color-deep-space-sparkle-320: hsl(198, 30%, 32%);
-  --color-deep-space-sparkle-120: hsl(198, 30%, 12%);
-  --color-charcoal-300: hsl(203, 14%, 30%);
-  --color-onyx-260: hsl(0, 0%, 26%);
-  --color-white-990: hsl(0, 0%, 99%);
-  --color-black-80: hsl(0, 0%, 8%);
-  --color-dim-gray-410: hsl(0, 0%, 41%);
+  --clr-primary-500: #696f96;
+  --clr-primary-350: #494e69;
+  --clr-primary-300: #3f435a;
+  --clr-primary-250: #34384b;
+  --clr-primary-200: #2a2d3c;
+  --clr-accent-500: #00ffc4;
+  --clr-secondary-520: #6093a9;
+  --clr-secondary-320: #395b6a;
+  --clr-secondary-120: #152228;
+  --clr-white: #fcfcfc;
+  --clr-black: #141414;
+  --clr-dim-gray: dimgray;
+  --clr-brand-github: white;
+  --clr-brand-twitter: white;
+  --clr-brand-dribbble: white;
+  --clr-about-body: #494e69;
+  --clr-about-head: #3f435a;
 }
 
-body {
-  --color-bg: var(--color-white-990);
-  --color-button: var(--color-black-80);
-  --color-fg: var(--color-black-80);
-  --color-inverted: var(--color-white-990);
-  --color-about-head: 65, 65, 65;
-  --color-brand-github: var(--color-black-80);
-  --color-brand-twitter: hsl(204, 88%, 53%);
-  --color-brand-dribbble: hsl(0, 0%, 27%);
-}
-
-body.dark-mode {
-  --color-bg: var(--color-primary-200);
-  --color-button: 255, 255, 255;
-  --color-fg: 255, 255, 255;
-  --color-inverted: 0, 0, 0;
-  --color-about-head: var(--color-independence);
-  --color-brand-github: var(--color-white-990);
-  --color-brand-twitter: var(--color-white-990);
-  --color-brand-dribbble: var(--color-white-990);
+:root.dark-mode {
+  --clr-primary-500: #696f96;
+  --clr-primary-350: #494e69;
+  --clr-primary-300: #3f435a;
+  --clr-primary-250: #34384b;
+  --clr-primary-200: #2a2d3c;
+  --clr-accent-500: #00ffc4;
+  --clr-secondary-520: #6093a9;
+  --clr-secondary-320: #395b6a;
+  --clr-secondary-120: #152228;
+  --clr-white: #fcfcfc;
+  --clr-black: #141414;
+  --clr-dim-gray: dimgray;
+  --clr-brand-github: white;
+  --clr-brand-twitter: white;
+  --clr-brand-dribbble: white;
+  --clr-about-body: #494e69;
+  --clr-about-head: #3f435a;
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    --color-bg: var(--color-primary-200);
-    --color-button: var(--color-black-80);
-    --color-fg: var(--color-black-80);
-    --color-inverted: var(--color-white-990);
-    --color-about-head: 65, 65, 65;
-    --color-brand-github: var(--color-white-990);
-    --color-brand-twitter: var(--color-white-990);
-    --color-brand-dribbble: var(--color-white-990);
+  :root {
+    --clr-primary-500: #696f96;
+    --clr-primary-350: #494e69;
+    --clr-primary-300: #3f435a;
+    --clr-primary-250: #34384b;
+    --clr-primary-200: #2a2d3c;
+    --clr-accent-500: #00ffc4;
+    --clr-secondary-520: #6093a9;
+    --clr-secondary-320: #395b6a;
+    --clr-secondary-120: #152228;
+    --clr-white: #fcfcfc;
+    --clr-black: #141414;
+    --clr-dim-gray: dimgray;
+    --clr-brand-github: white;
+    --clr-brand-twitter: white;
+    --clr-brand-dribbble: white;
+    --clr-about-body: #494e69;
+    --clr-about-head: #3f435a;
   }
 
-  body.light-mode {
-    --color-bg: var(--color-white-990);
-    --color-button: 0, 0, 0;
-    --color-fg: 0, 0, 0;
-    --color-inverted: 255, 255, 255;
-    --color-about-head: 65, 65, 65;
-    --color-brand-github: var(--color-black-80);
-    --color-brand-twitter: hsl(204, 88%, 53%);
-    --color-brand-dribbble: var(--color-white-990);
+  :root.light-mode {
+    --clr-primary-500: #696f96;
+    --clr-primary-350: #494e69;
+    --clr-primary-300: #3f435a;
+    --clr-primary-250: #34384b;
+    --clr-primary-200: #2a2d3c;
+    --clr-accent-500: #00ffc4;
+    --clr-secondary-520: #6093a9;
+    --clr-secondary-320: #395b6a;
+    --clr-secondary-120: #152228;
+    --clr-white: #fcfcfc;
+    --clr-black: #141414;
+    --clr-dim-gray: dimgray;
+    --clr-brand-github: white;
+    --clr-brand-twitter: white;
+    --clr-brand-dribbble: white;
+    --clr-about-body: #494e69;
+    --clr-about-head: #3f435a;
   }
 }
+/*White*/
 /***
  * 
  * General CSS
@@ -420,7 +438,7 @@ html, body {
 }
 
 body {
-  background: var(--color-bg);
+  background: var(--clr-primary-200);
   display: grid;
   grid-template-columns: 20% 1fr 20%;
   grid-template-rows: 0 1fr 1fr 1fr 1fr;
@@ -437,7 +455,7 @@ p {
 }
 
 h1 {
-  color: var(--color-accent-500);
+  color: var(--clr-accent-500);
   text-align: center;
   font-size: 49px;
   padding: 0;
@@ -456,14 +474,35 @@ h1 {
   z-index: 1;
   background-color: transparent;
   border: none;
+  stroke: var(--clr-accent-500);
 }
 
 .navigation-button .hamburger {
-  width: 25px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-toggle--close {
+  visibility: hidden;
+}
+
+.nav-open .navigation-button {
+  transition: visibility ease-in-out 250ms;
+}
+
+.nav-open .nav-toggle--burger {
+  visibility: hidden;
+}
+
+.nav-open .nav-toggle--close {
+  visibility: visible;
 }
 
 symbol.hamburger__svg line.burger {
+  stroke-width: 2px;
+}
+
+symbol.close__svg line.burger {
   stroke-width: 2px;
 }
 
@@ -479,7 +518,7 @@ nav {
   height: 100%;
   width: 75%;
   grid-column: left/-right;
-  background: var(--color-fg);
+  background: var(--clr-primary-300);
   grid-auto-flow: row;
   transform: translateX(-100%) translateY(-100%);
   transition: ease-out 250ms;
@@ -508,15 +547,15 @@ nav .page-links {
 nav .page-links > a {
   flex-grow: 100;
   text-decoration: none;
-  color: rgb(var(--color-fg));
+  color: white;
   text-align: center;
   width: 100%;
   padding: 25% 0;
-  background: rgb(var(--color-button));
+  background: var(--clr-primary-250);
 }
 
 nav .page-links a:hover, nav .page-links a:focus-visible {
-  background-color: rgb(var(--color-fg));
+  background-color: var(--clr-primary-500);
   border: none;
 }
 
@@ -558,7 +597,7 @@ section.welcome {
 .welcome .profile-icon {
   height: 131px;
   width: 131px;
-  background: url(/img/profile-icon.png), var(--color-fg);
+  background: url(/img/profile-icon.png), white;
   background-position-x: 5px;
   background-size: contain;
   border-radius: 50%;
@@ -574,7 +613,7 @@ section.welcome {
   font-size: 1.25rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: var(--color-white-990);
+  color: var(--clr-white);
   margin: 0;
   padding: 0;
 }
@@ -583,21 +622,21 @@ section.welcome {
   font-size: 3rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: var(--color-accent-500);
+  color: var(--clr-accent-500);
   margin: 0;
   padding: 0;
 }
 
 .welcome .down-pointer {
   display: block;
-  fill: var(--color-white-990);
+  fill: var(--clr-white);
   height: min-content;
   margin-bottom: 2rem;
 }
 
 .down-pointer ellipse {
   fill: none;
-  stroke: var(--color-white-990);
+  stroke: var(--clr-white);
   stroke-width: 0.4px;
 }
 
@@ -620,7 +659,7 @@ section.welcome {
   height: auto;
   background: transparent;
   justify-self: center;
-  background: var(--color-primary-300);
+  background: var(--clr-primary-300);
   grid-row: 3;
   display: flex;
   justify-content: center;
@@ -633,7 +672,7 @@ section.welcome {
   font-family: "Oxanium", cursive;
   font-weight: 400;
   font-size: 48px;
-  color: var(--color-white-990);
+  color: var(--clr-white);
 }
 
 .cta h1::after {
@@ -641,14 +680,14 @@ section.welcome {
   position: relative;
   top: 16px;
   content: "";
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--clr-secondary-550);
   width: 300px;
   height: 1px;
   margin: 0 auto;
 }
 
 .cta .quote::before, .cta .quote::after {
-  color: var(--color-accent-500);
+  color: var(--clr-accent-500);
   font-size: 2rem;
 }
 
@@ -664,8 +703,9 @@ section.welcome {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: var(--color-white-990);
+  color: var(--clr-white);
   text-align: center;
+  margin: 0 8px;
 }
 
 .cta .ending-statement {
@@ -674,22 +714,22 @@ section.welcome {
   font-style: italic;
   font-size: 24px;
   text-align: center;
-  color: var(--color-white-990);
+  color: var(--clr-white);
 }
 
-.cta_button {
+.cta__button {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 36px;
   text-decoration: none;
-  color: var(--color-accent-500);
+  color: var(--clr-accent-500);
   padding: 1.5px 20px;
-  border: solid 1px var(--color-primary-250);
+  border: solid 1px var(--clr-primary-250);
   border-radius: 50px;
   width: max-content;
   text-transform: uppercase;
-  margin: 0 auto;
-  background: var(--color-primary-350);
+  margin: 0 max(8px, 2%);
+  background: var(--clr-primary-350);
 }
 
 /**
@@ -724,7 +764,7 @@ section.welcome {
 }
 
 .project {
-  background: var(--color-bg);
+  background: var(--clr-primary-200);
 }
 
 .project:hover img {
@@ -755,14 +795,14 @@ section.welcome {
 }
 
 .project::before {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid var(--clr-white);
+  border-bottom: 1px solid var(--clr-white);
   transform: scale(0, 1);
 }
 
 .project::after {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  border-left: 1px solid var(--clr-white);
+  border-right: 1px solid var(--clr-white);
   transform: scale(1, 0);
 }
 
@@ -836,13 +876,10 @@ section.welcome {
 
 .project__caption .project__link {
   bottom: 5%;
-  width: auto;
-  text-align: left;
-  left: 5%;
-  right: 5%;
-  padding: 0.2em 0;
-  background: rgb(var(--color-button));
-  color: rgb(var(--color-white));
+  width: max-content;
+  position: absolute;
+  color: var(--clr-white);
+  text-decoration: underline;
 }
 
 .project::before .project__caption {
@@ -874,7 +911,7 @@ section.welcome {
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
-  color: white;
+  color: var(--clr-white);
 }
 
 .portfolio-modal.modal-open {
@@ -900,14 +937,14 @@ svg.close-modal {
   bottom: 1em;
   left: 1em;
   right: 1em;
-  stroke: var(--color-fg);
+  stroke: var(--clr-black);
   stroke-width: 2;
   height: 32;
   width: 32;
 }
 
 svg.close-modal circle {
-  fill: var(--color-inverted);
+  fill: var(--clr-white);
   stroke: none;
 }
 
@@ -944,7 +981,7 @@ svg.close-modal circle {
   grid-template-columns: 1fr auto auto;
   grid-template-rows: auto auto 1fr;
   grid-template-areas: "title title title" "search search-icon filter" "resume-items resume-items resume-items";
-  background: var(--color-bg);
+  background: var(--clr-primary-200);
 }
 
 .about .portfolio-modal.modal-open {
@@ -984,33 +1021,42 @@ svg.close-modal circle {
   grid-column: resume-items/resume-items;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  border: black solid 2px;
+  column-gap: 10px;
+  row-gap: 10px;
   height: min-content;
-  padding: 1rem;
   width: calc(100% - 4rem);
-  margin: 0.25rem 1rem;
+  margin: 0.25rem 15px;
 }
 
 .resume-items .resume__card {
-  background: var(--color-fg);
+  background: var(--clr-primary-300);
   margin: 0;
-  width: min-content;
-  height: min-content;
-  color: var(--color-white);
+  width: 8em;
+  height: 8em;
+  color: var(--clr-white);
   border: 3px solid var(--color-fg);
   border-radius: 0.5rem;
+  position: relative;
+}
+
+.resume-items .resume__card a {
+  position: absolute;
+  display: block;
+  height: inherit;
+  width: inherit;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .resume-items .resume__role {
-  margin-bottom: 2rem;
-  font-size: 18px;
-}
-
-.resume-items .resume__role::after {
-  content: " ";
-  margin-top: 4rem;
-  border-bottom: var(--color-bg) solid 2px;
+  font-size: 24px;
+  font-family: "Oxanium", cursive;
+  font-weight: 600;
+  text-align: center;
+  line-height: initial;
+  color: var(--clr-white);
 }
 
 /***
@@ -1034,7 +1080,7 @@ svg.close-modal circle {
   width: 100%;
   text-align: center;
   content: "about - Visual Studio Code";
-  background: var(--color-about-head);
+  background: var(--clr-about-head);
   --darken: 20%;
   border-radius: 1rem 1rem 0 0;
   padding: 0.5rem 3rem;
@@ -1042,8 +1088,8 @@ svg.close-modal circle {
 
 .about samp {
   display: block;
-  background: var(--color-fg);
-  color: var(--color-white-990);
+  background: var(--clr-about-body);
+  color: var(--clr-white);
   font-family: var(--font-ff-sourcecode);
   font-weight: var(--font-fw-medium);
   padding-bottom: 1.5rem;
@@ -1071,7 +1117,7 @@ svg.close-modal circle {
 
 .contact-form label {
   display: block;
-  color: var(--color-white-990);
+  color: var(--clr-white);
   margin-bottom: 4px;
 }
 
@@ -1103,8 +1149,8 @@ textarea {
   width: calc(100% / 2);
   height: 60px;
   justify-self: right;
-  background: rgb(var(--color-fg));
-  color: rgb(var(--color-white));
+  background: var(--color-fg);
+  color: var(--clr-white);
   font-size: 14px;
   border-radius: 7px;
   margin: 32px 0;
@@ -1116,7 +1162,7 @@ textarea {
   margin-bottom: 34px;
   margin-top: 21px;
   display: grid;
-  color: var(--color-white-990);
+  color: var(--clr-white);
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -1137,7 +1183,7 @@ textarea {
   position: relative;
   top: -15px;
   content: " ";
-  border-bottom: rgb(var(--color-fg)) 1px solid;
+  border-bottom: var(--color-fg) 1px solid;
   width: 91px;
   display: block;
   margin: 0 auto;
@@ -1152,15 +1198,15 @@ textarea {
 }
 
 .footer .social-icons span.fa-github {
-  color: var(--color-brand-github);
+  color: var(--clr-brand-github);
 }
 
 .footer .social-icons span.fa-twitter {
-  color: var(--color-brand-twitter);
+  color: var(--clr-brand-twitter);
 }
 
 .footer .social-icons span.fa-dribbble {
-  color: var(--color-brand-dribbble);
+  color: var(--clr-brand-dribbble);
 }
 
 /*

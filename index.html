@@ -16,7 +16,8 @@
     </div> -->
     <button class="navigation-button" aria-label="Click to open navigation">
         <svg class="hamburger">
-            <use  href="#hamburger"/>
+            <use class="nav-toggle--burger"  href="#hamburger"/>
+            <use class="nav-toggle--close"  href="#close"/>
         </svg>
     </button>
 
@@ -48,7 +49,7 @@
         </div>
 
         <a href="#home" class="down-pointer">
-            <svg width="18.5" height="30.5" viewBox="0 0 18.5 30.5">
+            <svg width="18.5" height="30.5" viewBox="0 0 18.5 30.5">                
                 <g transform="matrix(3.8 0 0 3.8 3.4e-7 0)">
                     <ellipse class="class1" cx="2.4" cy="4" rx="2.2" ry="3.8" />
                     <g>
@@ -67,99 +68,12 @@
             Regardless of the task or the challenges that come with it, if you struggle and persevere, you’ll eventually conquer any goal.
         </p>
         <p class="ending-statement">This is who I am.</p>
-        <a href="" class="cta_button">Hire Me</a>
+        <a href="#contact" class="cta__button">Contact Me</a>
 
     </section>
     
 
-    <section class="about" aria-label="About Me" id="about"  tabindex="0">
-        <h1>About Me</h1>
-        
-        <samp>
-            > $matthew.Name <br>
-            Matthew Davison <br><br>
-
-            > $matthew.Age <br>
-            22 <br><br>
-
-            > $matthew.Origin <br>
-            Plymouth, Devon <br><br>
-
-            > $matthew.Interests <br>
-            Listening to Music <br>
-            Watching Live Streamers <br>
-            Reading books and light novels <br>
-            Programming various projects <br>
-            Trying my hand at web design <br>
-            Sound design... just how do sounds make you feel emotions?! <br><br>
-
-            > $matthew.Bio <br>
-            Hello! I’m Matthew. I’m a designer and a programmer. I first discovered the marvels of the computing world
-            back in Primary School and since then, I’ve played around with creating various apps, websites, games and
-            software. <br><br>
-
-            > $matthew.Hire <br>
-            Fancy hiring me? Check out my resumes and my CV! <br><br>
-
-            > $matthew.CV <br>
-            <a href="#" download="Matthew Davison CV" aria-label="Click here to download my CV!"> Click
-                here</a> to download my CV!<br><br>
-
-
-            > $matthew.Resumes <br>
-            <a href="#" class="modal-link" id="resumesLink">Click here</a> to view all my role-specific resumes! <br> <br>
-
-            > $matthew.Disclaimer <br>
-            For privacy reasons, I haven't included details such as home address or mobile number on the CV or resumes.
-            Please email me if interested and I can share my mobile number then. Thank you!
-        </samp>
-
-        <div class="portfolio-modal">
-            <svg class="close-modal">
-                <circle cx="15" cy="15" r="14" />
-                <line x1="7" y1="7" x2="23" y2="23" />
-                <line x1="23" y1="7" x2="7" y2="23" />
-            </svg>
-
-            <h1 class="project__title">Resumes</h1>
-            <span class="project__search">
-                <input class="project__search--input " type="text"/> <i class ="project__search--icon  fas fa-search"></i>
-            </span>
-            
-            <i class="project__filter fas fa-filter"></i>
-
-            <div class="resume-items">
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure>
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure>
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure>
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure>
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure>
-                <figure class="resume__card" tabindex="0">
-                    <p class="resume__role">Web Designer</p>
-                    <p class="resume__sector">IT and Technology</p>
-                </figure> 
-            </div>
-
-
-            
-
-        </div>
-    </section>
+    
     <section class="portfolio" aria-label="Portfolio" id="portfolio" tabindex="0">
         <h1>My Portfolio</h1>
         <div class="projects" aria-label="Portfolio Items">
@@ -233,138 +147,98 @@
                             as sections, articles etc).</p>
                     </div>
                 </div>
-            </figure>     
-            <figure class="project project--light" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal">
-                        <circle cx="15" cy="15" r="14" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>    
-            <figure class="project project--light" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal">
-                        <circle cx="15" cy="15" r="14" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>    
-            <figure class="project project--light" tabindex="0">
-                <img class="project__image project__image--primary" src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                    alt="The login screen for my Issue Tracker Project">
-                    
-                <figcaption class="project__caption project__caption--active">
-                    <h3 class="project__title" id="title">Issue Tracker</h3>
-                    <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
-                        development- As you would expect from a issue tracker, it includes issue management, database
-                        integration etc</p>
-                    <a class="project__link">Read More</a>
-                </figcaption>
-                <!-- <figcaption class="project__caption project__caption--inactive"> <i class="fas fa-hand-pointer"></i></figcaption> -->
-
-                <div class="portfolio-modal">
-                    <svg class="close-modal">
-                        <circle cx="15" cy="15" r="14" />
-                        <line x1="7" y1="7" x2="23" y2="23" />
-                        <line x1="23" y1="7" x2="7" y2="23" />
-                    </svg>
-                    <h1 class="project__title">Issue Tracker</h1>
-                    <img class="project__image" src="" alt="">
-                    <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
-                        would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    <div class="text-image">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                    <div class="image-text">
-                        <img src="/img/portfolio/Issue Tracker/LoginScreen960.png"
-                            alt="a pair of glasses on a closed laptop">
-                        <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
-                            no idea how to handle things. It was also my first and currently my only ASP.Net Core
-                            project using the "MVC" structure. When creating this project, I had no idea how to do CSS
-                            and I was heavily depending on divs, rather than using the most appropriate elements (such
-                            as sections, articles etc).</p>
-                    </div>
-                </div>
-            </figure>         
+            </figure>            
         </div>
     </section>
+
+    <section class="about" aria-label="About Me" id="about"  tabindex="0">
+        <h1>About Me</h1>
+        
+        <samp>
+            > $matthew.Name <br>
+            Matthew Davison <br><br>
+
+            > $matthew.Age <br>
+            22 <br><br>
+
+            > $matthew.Origin <br>
+            Plymouth, Devon <br><br>
+
+            > $matthew.Interests <br>
+            Listening to Music <br>
+            Watching Live Streamers <br>
+            Reading books and light novels <br>
+            Programming various projects <br>
+            Trying my hand at web design <br>
+            Sound design... just how do sounds make you feel emotions?! <br><br>
+
+            > $matthew.Bio <br>
+            Hello! I’m Matthew. I’m a designer and a programmer. I first discovered the marvels of the computing world
+            back in Primary School and since then, I’ve played around with creating various apps, websites, games and
+            software. <br><br>
+
+            > $matthew.Hire <br>
+            Fancy hiring me? Check out my resumes and CV! Note, both links lead to dropbox in a new tab!<br><br>
+
+            > $matthew.CV <br>
+            <a href="https://www.dropbox.com/sh/gbrg56rmi7nicmz/AAD-2XdgQlAmdo187PuQ_rhAa?dl=0" target='_blank' download="Matthew Davison CV" aria-label="Click here to download my CV!"> Click
+                here</a> to download my CV! Note: This is a full CV, not a Resume! <br><br>The CV doesn't have many job-specific keywords. Use the Resume for that!<br><br>
+
+
+            > $matthew.Resumes <br>
+            <a href="#" class="modal-link" id="resumesLink">Click here</a> to view all my role-specific resumes! <br> <br>
+
+            > $matthew.Disclaimer <br>
+            For privacy reasons, I haven't included details such as home address or mobile number on the CV or resumes.
+            Please email me if interested and I can share my mobile number then. Thank you!
+        </samp>
+
+        <div class="portfolio-modal">
+            <svg class="close-modal">
+                <circle cx="15" cy="15" r="14" />
+                <line x1="7" y1="7" x2="23" y2="23" />
+                <line x1="23" y1="7" x2="7" y2="23" />
+            </svg>
+
+            <h1 class="project__title">Resumes</h1>
+            <!-- <span class="project__search">
+                <input class="project__search--input " type="text"/> <i class ="project__search--icon  fas fa-search"></i>
+            </span>
+            
+            <i class="project__filter fas fa-filter"></i> -->
+
+            <div class="resume-items">
+
+                <figure class="resume__card" tabindex="0">
+                    <a href="https://www.dropbox.com/sh/79cw4c1nppqbtif/AABMJ1dcc2cjv1iZY4HO8EXSa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                        <p class="resume__role">Web Designer</p>
+                    </a>
+                </figure>
+                <figure class="resume__card" tabindex="0">
+                    <a href="https://www.dropbox.com/sh/lj36cv16c1wvu0x/AAAzdcf2PIqVIPbXMvIcdZbra?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                        <p class="resume__role">Android Developer</p>
+                    </a>
+                </figure>
+                <figure class="resume__card" tabindex="0">
+                    <a href="https://www.dropbox.com/sh/4bubmdbnomc49ob/AAAwaxjA7beu9z0U87NRCSIUa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                        <p class="resume__role">Shop Assistant</p>
+                    </a>
+                </figure>
+                <figure class="resume__card" tabindex="0">
+                    <a href="https://www.dropbox.com/sh/mbhgj9aomqo0sph/AAAGOcrrXS0eCxt3eb-0zDkwa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                        <p class="resume__role">IT Support Associate</p>
+                    </a>
+                </figure>
+                
+
+            </div>
+
+
+            
+
+        </div>
+    </section>
+
     <section class="contact" aria-label="Contact Me" id="contact"  tabindex="0">
         <h1>Contact Me</h1>
         <form class="contact-form" aria-label="Contact Form" action="https://formspree.io/f/xgeryark" method="POST"
@@ -395,11 +269,19 @@
     </section>
 
     <svg height="0px">        
-            <symbol class="hamburger__svg" id="hamburger" aria-label="Hamburger icon" viewBox="0 0 25 12">
-                <line class="burger" x1="0" y1="6" x2="25" y2="6"/>
-                <line class="burger" x1="0" y1="0" x2="25" y2="0"/>
-                <line class="burger" x1="0" y1="12" x2="20" y2="12"/>        
+            <symbol class="hamburger__svg" id="hamburger" aria-label="Hamburger icon" viewBox="0 0 30 30"> <!--25-->
+                <rect width="30" height="30" fill="transparent"/>
+
+                <line class="burger" x1="3" y1="9" x2="27" y2="9"/>
+                <line class="burger" x1="3" y1="15" x2="27" y2="15"/>
+                <line class="burger" x1="3" y1="21" x2="23" y2="21"/>        
             </symbol>    
+
+            <symbol id="close" class="close__svg" viewBox="0 0 30 30">
+                <rect width="30" height="30" fill="transparent"/>
+                <line class="burger" x1="3" y1="3" x2="27" y2="27"/>
+                <line class="burger" x1="3" y1="27" x2="27" y2="3"/>
+            </symbol>
     </svg>
 </body>
 <script src="js/index.js"></script>
