@@ -204,4 +204,23 @@
         height: 5vh;
         line-height: 5vh;
     }
+
+    .cta .cta__button{
+        margin: 0 auto;
+        font-size: 48px;
+    }    
+    .project {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .project .project__caption .project__description{
+        visibility: visible;
+    }
+    .project .project__caption .project__title{font-size: 4rem; line-height: normal;}
+    .project .project__caption .project__description {font-size: 2.5rem; line-height: normal;}
+    .project .project__caption .project__link {font-size: 2.5rem; line-height: normal;}
+    .about samp {
+        margin: 0 379px;
+        width: auto;
+    }
 }
