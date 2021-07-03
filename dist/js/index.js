@@ -2,6 +2,7 @@ const navigationButton = document.querySelector(".navigation-button");
 const nav = document.querySelector(".hamburger");
 
 const nav__svg = document.querySelector(".hamburger__svg");
+const home_button = document.querySelector("#nav__home")
 // nav__svg.style="stroke:white";
 // const portfolio_section = document.querySelector(".portfolio");
 // const about_section = document.querySelector(".about");
@@ -10,6 +11,11 @@ const toggleNav = _ => {
 };
 
 navigationButton.addEventListener("click", _ => toggleNav());
+home_button.addEventListener("click", e => {
+    e.preventDefault();
+    console.log(e);
+    document.body.scrollTo({top:0, behavior:'smooth'})
+})
 
 // const portfolio__sec__top = portfolio_section.getBoundingClientRect().top ;
 // const about__sec__top = about_section.getBoundingClientRect().top - 15-12;

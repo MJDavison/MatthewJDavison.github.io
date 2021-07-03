@@ -28,3 +28,8 @@
     grid-row: span 2;
     font-size: 1.5rem;
 }
+
+.project:hover .fa-hand-pointer, 
+.project:focus .fa-hand-pointer {
+    visibility: hidden;
+}

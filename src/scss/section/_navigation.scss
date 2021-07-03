@@ -61,6 +61,7 @@ nav{
     transform: translateX(-100%) translateY(-100%);
     transition: ease-out 250ms;
     position: fixed;
+    font-family: $font-ff-poppins;
     @supports not (inset:0) {
         top: 0;
         bottom: 0;

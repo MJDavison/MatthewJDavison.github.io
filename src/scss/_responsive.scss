@@ -183,6 +183,9 @@
     .contact,.cta {
         grid-template-columns: 30% 1fr 30%;
     }
+    .project .fa-hand-pointer {
+    visibility: hidden;
+}
 
 
 }
