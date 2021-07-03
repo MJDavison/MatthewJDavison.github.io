@@ -350,6 +350,7 @@ template {
   --clr-primary-250: #34384b;
   --clr-primary-200: #2a2d3c;
   --clr-accent-500: #00ffc4;
+  --clr-accent-700: #66ffdb;
   --clr-secondary-520: #6093a9;
   --clr-secondary-320: #395b6a;
   --clr-secondary-120: #152228;
@@ -370,6 +371,7 @@ template {
   --clr-primary-250: #34384b;
   --clr-primary-200: #2a2d3c;
   --clr-accent-500: #00ffc4;
+  --clr-accent-700: #66ffdb;
   --clr-secondary-520: #6093a9;
   --clr-secondary-320: #395b6a;
   --clr-secondary-120: #152228;
@@ -391,6 +393,7 @@ template {
     --clr-primary-250: #34384b;
     --clr-primary-200: #2a2d3c;
     --clr-accent-500: #00ffc4;
+    --clr-accent-700: #66ffdb;
     --clr-secondary-520: #6093a9;
     --clr-secondary-320: #395b6a;
     --clr-secondary-120: #152228;
@@ -411,6 +414,7 @@ template {
     --clr-primary-250: #34384b;
     --clr-primary-200: #2a2d3c;
     --clr-accent-500: #00ffc4;
+    --clr-accent-700: #66ffdb;
     --clr-secondary-520: #6093a9;
     --clr-secondary-320: #395b6a;
     --clr-secondary-120: #152228;
@@ -906,16 +910,25 @@ section.welcome {
   bottom: 2em;
   left: 2em;
   right: 2em;
-  background: var(--color-fg);
+  background: var(--clr-primary-200);
   z-index: 5;
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;
   color: var(--clr-white);
+  padding-bottom: 1rem;
 }
 
 .portfolio-modal.modal-open {
   display: block;
+}
+
+.portfolio-modal p {
+  margin: 0 16px;
+}
+
+.portfolio-modal .project__image {
+  background: var(--clr-accent-700);
 }
 
 .portfolio-modal .text-image img {
@@ -1424,6 +1437,25 @@ textarea {
   .about samp {
     margin: 0 379px;
     width: auto;
+  }
+
+  .portfolio-modal {
+    top: 6em;
+    bottom: 6em;
+    left: 6em;
+    right: 6em;
+  }
+
+  .portfolio-modal .project__summary, .portfolio-modal .text-image, .portfolio-modal .image-text, .project-modal p {
+    margin: 0 23rem;
+    margin-top: 3rem;
+  }
+
+  .portfolio-modal .close-modal {
+    top: 5em;
+    bottom: 5em;
+    left: 5em;
+    right: 5em;
   }
 }
 

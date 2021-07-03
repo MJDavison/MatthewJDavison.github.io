@@ -223,4 +223,25 @@
         margin: 0 379px;
         width: auto;
     }
+
+    .portfolio-modal{
+        top: 6em;
+        bottom: 6em;
+        left: 6em;
+        right: 6em;        
+    }
+
+    .portfolio-modal .project__summary, .portfolio-modal .text-image, .portfolio-modal .image-text, .project-modal p{
+        @include container(0 23rem);
+        margin-top: 3rem;
+    }
+
+
+
+    .portfolio-modal .close-modal{
+        top: 5em;
+        bottom: 5em;
+        left: 5em;
+        right: 5em;
+    }
 }
