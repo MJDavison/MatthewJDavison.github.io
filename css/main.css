@@ -1457,17 +1457,11 @@ textarea {
   }
 
   .project {
-    grid-column: span 2;
-    grid-row: span 2;
-    font-size: 5.5rem;
+    font-size: 2.75rem;
   }
 
   .project:first-child {
     font-size: 5.5rem;
-  }
-
-  .project .project__caption .project__description {
-    visibility: visible;
   }
 
   .project .project__caption .project__title {
