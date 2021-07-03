@@ -17,7 +17,9 @@
     transition: opacity ease-out 250ms;    
 }
 
-.project:hover .project__caption{
+.project:hover .project__caption,
+.project:focus .project__caption
+{
     opacity: 1;    
 }
 
@@ -43,6 +45,8 @@
     left: 4%;
     right: 1%;
     margin: 0;
+    z-index: 1;
+    font-size: 1rem;
 }
 .project__caption .project__title {
     top: 2%;

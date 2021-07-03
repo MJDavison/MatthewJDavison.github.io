@@ -1,18 +1,16 @@
 const portfolioItems = document.querySelector(".projects");
 const resumesLink = document.querySelector("#resumesLink");
-console.log(resumesLink);
+// console.log(resumesLink);
 var closeButton;
 let modalOpen = false;
 function openModal(e) {
   e.preventDefault();
+  
   if (!modalOpen) {
-    const caption = e.target.querySelector(".project__caption");
-    if (!caption) return;
-    const modalToggle = caption.querySelector(".project__link");
+    const modalToggle = e.target.closest(".project__link");
     if (!modalToggle) return;
-
+    const caption = modalToggle.parentElement;
     let modal = caption.nextElementSibling;
-    console.log(modal);
     modal.classList.add("modal-open");
     modalOpen = true;
     document.body.style.overflowY = "hidden";
