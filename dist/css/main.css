@@ -978,8 +978,7 @@ svg.close-modal {
   right: 1em;
   stroke: var(--clr-black);
   stroke-width: 2;
-  height: 32;
-  width: 32;
+  z-index: 1;
 }
 
 svg.close-modal circle {
