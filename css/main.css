@@ -464,6 +464,7 @@ h1 {
   font-size: 49px;
   padding: 0;
   margin: 0 0 34px 0;
+  font-family: "Source Code Pro", monospace;
 }
 
 /***
@@ -527,6 +528,7 @@ nav {
   transform: translateX(-100%) translateY(-100%);
   transition: ease-out 250ms;
   position: fixed;
+  font-family: "Poppins", sans-serif;
   inset: 0;
 }
 @supports not (inset: 0) {
@@ -929,6 +931,11 @@ section.welcome {
   font-size: 1.5rem;
 }
 
+.project:hover .fa-hand-pointer,
+.project:focus .fa-hand-pointer {
+  visibility: hidden;
+}
+
 .portfolio-modal {
   position: fixed;
   font-size: 14px;
@@ -1151,6 +1158,7 @@ svg.close-modal circle {
 .contact-form {
   margin: auto 1rem;
   display: grid;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-form label {
@@ -1201,6 +1209,7 @@ textarea {
   margin-top: 21px;
   display: grid;
   color: var(--clr-white);
+  font-family: "Poppins", sans-serif;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -1415,6 +1424,10 @@ textarea {
 
   .contact, .cta {
     grid-template-columns: 30% 1fr 30%;
+  }
+
+  .project .fa-hand-pointer {
+    visibility: hidden;
   }
 }
 @media screen and (min-width: 1440px) {
