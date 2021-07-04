@@ -1,9 +1,8 @@
 .resume-items{
-    margin: 0 20px;
     display:grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr;    
-    gap: 15px;
+    justify-content:center;  
+    grid-template-columns: repeat(2, max-content);  
+    gap: 1rem;      
 }
 .project__title {
     grid-column: span 2;

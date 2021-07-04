@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "type": "firefox",
             "name": "http://192.168.137.1:2168/",
             "request": "launch",
             "url": "http://192.168.137.1:2168/"
