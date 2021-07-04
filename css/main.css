@@ -1213,7 +1213,7 @@ samp a:focus {
 
   .resume__card {
     height: 12rem;
-    width: 12rem;
+    width: rem;
   }
 }
 .contact-form {
