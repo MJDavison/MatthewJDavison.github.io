@@ -22,6 +22,17 @@
       width: 100%;
       
   }
+  input.touched:invalid{
+    border: 1px solid blue;
+  }
+  input.touched:required:invalid,
+  textarea.touched:required:invalid { 
+    border:  solid 2px red;
+  }
+  input.touched:valid,
+  textarea.touched:valid { 
+    border:  solid 2px greenyellow;
+  }
   
   .contact-form input {
     height: 45px;

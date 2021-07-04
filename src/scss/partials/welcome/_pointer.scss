@@ -3,7 +3,7 @@
     display: block;
     fill: var(--clr-white);   
     height: min-content;
-    margin-bottom: 2rem;
+    margin-bottom: calc(2rem + 0);
 }
 .down-pointer ellipse{    
     fill: none;

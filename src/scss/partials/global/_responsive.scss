@@ -1,3 +1,20 @@
+@include mq(480px){
+
+}
+@include mq(768px){
+ section {
+     min-height: 50vh;
+ }
+}
+@include mq(1024px){
+
+}
+@include mq(1280px){
+
+}
+@include mq(1440px){
+
+}
 @include mq(1920px){
     section{
         margin-top: 21px;

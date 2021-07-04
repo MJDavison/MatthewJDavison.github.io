@@ -2,18 +2,33 @@
 
 }
 @include mq(768px){
+    .profile-icon {
+        margin-top: auto;
+        height: calc(8.1875rem * 1.5);
+        width: calc(8.1875rem * 1.5);
+    }
+    .greet {
+        font-size: calc(1.25rem * 1.5);
+    }
 
+    .name {
+        font-size: calc(3rem * 1.5);
+    }
+    .role {
+        font-size: calc(1rem * 1.5);
+        margin-bottom: auto;
+    }
+    .welcome {    
+        min-height: inherit; 
+    }
+    .down-pointer {
+        display: none;
+    }
 }
 @include mq(1024px){
 
 }
 @include mq(1280px){
-
-}
-@include mq(1440px){
-
-}
-@include mq(1920px){
     .profile-icon {
         margin-top: auto;
         height: calc(8.1875rem * 2);
@@ -30,4 +45,13 @@
         font-size: calc(1rem * 2);
         margin-bottom: auto;
     }
+}
+@include mq(1440px){
+
+}
+@include mq(1920px){
+    
+    // .down-pointer {
+    //     display: none;
+    // }
 }
