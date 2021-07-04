@@ -1,9 +1,9 @@
 const portfolioItems = document.querySelector(".projects");
 const resumesLink = document.querySelector("#resumesLink");
 let anyModalOpen = false;
-function openModal(e){
+function openModal(e, linkClass){
 if (!anyModalOpen) {
-        const modalToggle = e.target.closest('.project__link');
+        const modalToggle = e.target.closest(linkClass);
         // console.log(modalToggle);
         if (modalToggle) {
             const modal = modalToggle.parentElement.nextElementSibling;
@@ -22,7 +22,7 @@ if (!anyModalOpen) {
     }   
 }
 
-portfolioItems.addEventListener("click", (e) => openModal(e));
-resumesLink.addEventListener("click", (e) => openResumesModal(e));
+portfolioItems.addEventListener("click", (e) => openModal(e, '.project__link'));
+resumesLink.addEventListener("click", (e) => openModal(e, '.modal__link'));
 
 resumesLink.addEventListener("click", e => console.log(e));

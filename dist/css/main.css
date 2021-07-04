@@ -1125,6 +1125,37 @@ samp a:focus {
   color: aquamarine;
 }
 
+.resume-items {
+  margin: 0 20px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.project__title {
+  grid-column: span 2;
+}
+
+.resume__card {
+  background: var(--clr-primary-250);
+  margin: 0;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.resume__card--link {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 1920px) {
   .about {
     width: 60vw;

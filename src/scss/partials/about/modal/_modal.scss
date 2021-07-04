@@ -1,0 +1,12 @@
+.resume-items{
+    margin: 0 20px;
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;    
+    gap: 15px;
+}
+.project__title {
+    grid-column: span 2;
+}
+
+@import 'resume-item';
