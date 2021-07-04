@@ -464,10 +464,6 @@ p {
   visibility: visible;
 }
 
-.nav-open nav {
-  transform: translateX(0) translateY(0);
-}
-
 nav {
   z-index: 10;
   display: grid;
@@ -480,7 +476,7 @@ nav {
   grid-auto-flow: row;
   transform: translateX(-100%) translateY(-100%);
   transition: ease-out 250ms;
-  position: sticky;
+  position: fixed;
   font-family: var(--font-ff-poppins);
   inset: 0;
 }
@@ -490,6 +486,10 @@ nav {
     bottom: 0;
     left: 0;
   }
+}
+
+.nav-open nav {
+  transform: translateX(0) translateY(0);
 }
 
 .page-links {
@@ -529,7 +529,6 @@ nav {
     width: 100vw;
     height: max-content;
     min-height: max-content;
-    margin-bottom: 2rem;
   }
 
   .page-links {
@@ -553,6 +552,7 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin-top: 21px;
 }
 
 .profile-icon {

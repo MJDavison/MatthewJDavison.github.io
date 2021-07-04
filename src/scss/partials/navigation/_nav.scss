@@ -1,7 +1,3 @@
-.nav-open nav{
-    transform: translateX(0) translateY(0);;
-}
-
 nav{      
     z-index: 10;
     display: grid;
@@ -14,7 +10,7 @@ nav{
     grid-auto-flow: row;
     transform: translateX(-100%) translateY(-100%);
     transition: ease-out 250ms;
-    position: sticky;
+    position: fixed;
     font-family: var(--font-ff-poppins);
     @supports not (inset:0) {
         top: 0;
@@ -23,6 +19,11 @@ nav{
     }
     inset:0;
 }
+.nav-open nav{
+    transform: translateX(0) translateY(0);;
+    
+}
+
 
 .page-links{
     height: 100vh;
