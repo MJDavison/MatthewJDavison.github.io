@@ -1126,11 +1126,10 @@ samp a:focus {
 }
 
 .resume-items {
-  margin: 0 20px;
   display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  justify-content: center;
+  grid-template-columns: repeat(2, max-content);
+  gap: 1rem;
 }
 
 .project__title {
@@ -1156,6 +1155,41 @@ samp a:focus {
   height: 100%;
 }
 
+.resume__role {
+  width: 100%;
+  margin: 0 0.5rem;
+}
+
+.resume__card:hover,
+.resume__card:focus {
+  background: var(--clr-secondary-520);
+}
+
+@media screen and (min-width: 480px) {
+  .resume-items {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+@media screen and (min-width: 768px) {
+  .resume-items {
+    grid-template-columns: repeat(5, max-content);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .resume-items {
+    grid-template-columns: repeat(5, max-content);
+  }
+
+  .resume__card {
+    height: 9rem;
+    width: 9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .resume-items {
+    grid-template-columns: repeat(7, max-content);
+  }
+}
 @media screen and (min-width: 1920px) {
   .about {
     width: 60vw;
@@ -1175,6 +1209,11 @@ samp a:focus {
     width: calc(100% - 3rem);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .resume__card {
+    height: 12rem;
+    width: 12rem;
   }
 }
 .contact-form {
