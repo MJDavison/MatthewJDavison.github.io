@@ -1,0 +1,33 @@
+@include mq(480px){
+
+}
+@include mq(768px){
+
+}
+@include mq(1024px){
+
+}
+@include mq(1280px){
+
+}
+@include mq(1440px){
+
+}
+@include mq(1920px){
+    .profile-icon {
+        margin-top: auto;
+        height: calc(8.1875rem * 2);
+        width: calc(8.1875rem * 2);
+    }
+    .greet {
+        font-size: calc(1.25rem * 2);
+    }
+
+    .name {
+        font-size: calc(3rem * 2);
+    }
+    .role {
+        font-size: calc(1rem * 2);
+        margin-bottom: auto;
+    }
+}

@@ -1,0 +1,15 @@
+.footer {
+    min-height: max-content;
+
+    margin-bottom: 2rem;
+    margin-top: calc(1rem + 5px);
+    display: grid;
+    color: var(--clr-white);
+    font-family: var(--font-ff-poppins);
+    
+    justify-content: center;    
+    text-align: center;
+}
+@import 'social-icons';
+@import 'copyright';
+@import 'responsive';

@@ -1,0 +1,43 @@
+@include mq(480px){
+
+}
+@include mq(768px){
+
+}
+@include mq(1024px){
+
+}
+@include mq(1280px){
+
+}
+@include mq(1440px){
+
+}
+@include mq(1920px){
+    .cta {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;        
+        min-height: max-content;
+        padding: 5rem 0;
+    }
+    
+    .cta__heading {
+        font-size: calc(3rem * 1.5);
+    }
+
+    .quote {
+        font-size: calc(1.125rem * 1.95);
+    }
+
+    .ending-statement {
+        font-size: calc(1.5rem * 1.5);
+        
+    }
+
+    .cta__button {        
+        font-size: calc(2.25rem * 1.5);
+    }
+
+    
+}

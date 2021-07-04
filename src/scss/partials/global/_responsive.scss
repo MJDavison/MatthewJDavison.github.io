@@ -1,0 +1,10 @@
+@include mq(1920px){
+    section{
+        margin-top: 21px;
+        width: 100vw;
+        min-height: 10vh;
+    }
+    h1{
+        font-size: calc(2.5rem * 2);
+    }
+}

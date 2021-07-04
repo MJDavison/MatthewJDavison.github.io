@@ -1,0 +1,41 @@
+@include mq(480px){
+    .navigation-button {
+        visibility:collapse;
+    }
+    nav{
+        transform: translateX(0);        
+        width: 100vw;
+        height:max-content;
+        min-height: max-content;
+        margin-bottom: 2rem;
+    }
+    .page-links {
+        flex-direction: row;
+        height: max-content;        
+    }
+    .page-links a{
+        height: max-content;    
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;     
+    }
+    .page-links a:not(:last-of-type){
+        border-bottom: none;
+        border-right: solid 1px black;
+    }
+}
+@include mq(768px){
+
+}
+@include mq(1024px){
+
+}
+@include mq(1280px){
+
+}
+@include mq(1440px){
+
+}
+@include mq(1920px){
+    
+    
+}

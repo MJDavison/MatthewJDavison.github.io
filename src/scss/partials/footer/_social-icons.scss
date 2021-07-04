@@ -1,0 +1,25 @@
+.social-icons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    column-gap: 40px;    
+    margin-bottom: 15px;
+    
+}
+
+.social-icons span{
+    font-size: 30px;
+}
+
+.social-icons span.fa-github{
+    color: var(--clr-brand-github);
+}
+
+.social-icons span.fa-twitter{
+    color: var(--clr-brand-twitter);
+}
+
+.social-icons span.fa-dribbble{
+    color: var(--clr-brand-dribbble);
+}
