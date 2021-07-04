@@ -257,15 +257,16 @@
         <form class="contact-form" aria-label="Contact Form" action="https://formspree.io/f/xgeryark" method="POST"
             autocomplete="off">
             <label class="form-name" for="name">Name:
-                <input type="text" aria-label="name" name="name" id="name" required="true"></label>
+                <input type="text" aria-label="name" name="name" id="name" required pattern="^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"></label> 
+                <!-- I can't simply use [A-Za-z\s] since there might be someone called 'Jo'n Smith or John M. Smith, things like that. -->
             <label class="form-email" for="email">Email
-                <input type="text" aria-label="email" name="email" id="email" required="true">
+                <input type="email" aria-label="email" name="email" id="email" required>
             </label>
             <label class="form-subject" for="subject">Subject
-                <input type="text" aria-label="subject" name="subject" id="subject" required="true">
+                <input type="text" aria-label="subject" name="subject" id="subject" required>
             </label>
             <label class="form-message" for="message">Message
-                <textarea aria-label="message" name="message" id="message" required="true"></textarea>
+                <textarea aria-label="message" name="message" id="message" required></textarea>
             </label>
             <button class="form-submit" type="submit">Send</button>
         </form>
@@ -299,6 +300,7 @@
 </body>
 <script src="js/index.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/css-fixes.js"></script> <!-- This will be used for css bugs -->
 
 </html>
 

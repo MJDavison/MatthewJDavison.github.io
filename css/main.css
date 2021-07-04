@@ -422,6 +422,11 @@ p {
   color: var(--clr-white);
 }
 
+@media screen and (min-width: 768px) {
+  section {
+    min-height: 50vh;
+  }
+}
 @media screen and (min-width: 1920px) {
   section {
     margin-top: 21px;
@@ -551,8 +556,8 @@ nav {
   text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin-top: 21px;
+  min-height: calc(var(--vh, 1vh) * 95);
+  padding-top: 4rem;
 }
 
 .profile-icon {
@@ -589,7 +594,7 @@ nav {
   display: block;
   fill: var(--clr-white);
   height: min-content;
-  margin-bottom: 2rem;
+  margin-bottom: calc(2rem + 0);
 }
 
 .down-pointer ellipse {
@@ -605,7 +610,35 @@ nav {
   bottom: 0;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 768px) {
+  .profile-icon {
+    margin-top: auto;
+    height: calc(8.1875rem * 1.5);
+    width: calc(8.1875rem * 1.5);
+  }
+
+  .greet {
+    font-size: calc(1.25rem * 1.5);
+  }
+
+  .name {
+    font-size: calc(3rem * 1.5);
+  }
+
+  .role {
+    font-size: calc(1rem * 1.5);
+    margin-bottom: auto;
+  }
+
+  .welcome {
+    min-height: inherit;
+  }
+
+  .down-pointer {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
   .profile-icon {
     margin-top: auto;
     height: calc(8.1875rem * 2);
@@ -975,6 +1008,10 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   .project, .project img {
     width: inherit;
   }
@@ -1131,6 +1168,20 @@ textarea {
   margin-top: 0.5em;
   margin-bottom: 20px;
   width: 100%;
+}
+
+input.touched:invalid {
+  border: 1px solid blue;
+}
+
+input.touched:required:invalid,
+textarea.touched:required:invalid {
+  border: solid 2px red;
+}
+
+input.touched:valid,
+textarea.touched:valid {
+  border: solid 2px greenyellow;
 }
 
 .contact-form input {
