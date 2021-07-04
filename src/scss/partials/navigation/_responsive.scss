@@ -5,8 +5,8 @@
     nav{
         transform: translateX(0);        
         width: 100vw;
-        height:max-content;
-        min-height: max-content;
+        height:0;
+        min-height: 0;
     }
     .page-links {
         flex-direction: row;
