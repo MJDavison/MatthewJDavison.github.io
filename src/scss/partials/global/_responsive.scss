@@ -1,21 +1,21 @@
-@include mq(480px){
+@include mq($bp-phone){
 
 }
-@include mq(768px){
- section {
-     min-height: 50vh;
- }
+@include mq($bp-tablet-portrait){
+    section {
+        min-height: 50vh;
+    }
 }
-@include mq(1024px){
+@include mq($bp-tablet-landscape){
+  
+}
+@include mq($bp-desktop){
+    
+}
+@include mq($bp-big-desktop){
 
 }
-@include mq(1280px){
-
-}
-@include mq(1440px){
-
-}
-@include mq(1920px){
+@include mq($bp-huge-desktop){
     section{
         margin-top: 21px;
         width: 100vw;

@@ -1,4 +1,4 @@
-@include mq(480px){
+@include mq($bp-phone){
 // ====================================================== //
 // ==================== Resumes Modal =================== //
 // ====================================================== //
@@ -7,12 +7,12 @@
     grid-template-columns: repeat(3, max-content);     
 }
 }
-@include mq(768px){
+@include mq($bp-tablet-portrait){
     .resume-items {
         grid-template-columns: repeat(5, max-content);     
     }
 }
-@include mq(1024px){
+@include mq($bp-tablet-landscape){
     .resume-items {
         grid-template-columns: repeat(5, max-content);     
     }
@@ -21,15 +21,15 @@
         width: 9rem;
     }
 }
-@include mq(1280px){
+@include mq($bp-desktop){
     .resume-items {
         grid-template-columns: repeat(7, max-content);     
     }
 }
-@include mq(1440px){
+@include mq($bp-big-desktop){
 
 }
-@include mq(1920px){
+@include mq($bp-huge-desktop){
     .about {
         width: 60vw;
         margin-left: auto;
@@ -52,8 +52,27 @@
 
     .resume__card {
         height: 12rem;
-        width: 12rem;
+        width: rem;
     }
 
 
+}
+
+@include mq($bp-phone){
+
+}
+@include mq($bp-tablet-portrait){
+
+}
+@include mq($bp-tablet-landscape){
+  
+}
+@include mq($bp-desktop){
+    
+}
+@include mq($bp-big-desktop){
+
+}
+@include mq($bp-huge-desktop){
+    
 }

@@ -1,7 +1,7 @@
-@include mq(480px){
+@include mq($bp-phone){
 
 }
-@include mq(768px){
+@include mq($bp-tablet-portrait){
     .projects {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         
@@ -21,16 +21,16 @@
         margin-left: 2rem;
     }
 }
-@include mq(1024px){
+@include mq($bp-tablet-landscape){
+  
+}
+@include mq($bp-desktop){
+    
+}
+@include mq($bp-big-desktop){
 
 }
-@include mq(1280px){
-
-}
-@include mq(1440px){
-
-}
-@include mq(1920px){
+@include mq($bp-huge-desktop){
     .portfolio {
         margin: 0 auto;
         max-width: 60vw;
@@ -87,5 +87,4 @@
         margin-left: 0;
         margin-right: 1rem;
     }
-
 }
