@@ -1,5 +1,8 @@
 @include mq($bp-phone){
-
+    .projects {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
 }
 @include mq($bp-tablet-portrait){
     .projects {

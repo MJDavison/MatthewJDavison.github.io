@@ -1,5 +1,31 @@
 @include mq($bp-phone){
+    .contact-form {        
+        grid-template-areas: 
+        "name email"
+        "subject ."
+        "message message"
+        ". submit";
 
+        column-gap: 1rem;
+    }
+    .form-name {
+        grid-area: name;
+    }
+    .form-email {
+        grid-area: email;
+    }
+    .form-subject {
+        grid-area: subject;
+    }
+    .form-message {
+        grid-area: message;
+    }
+    .form-submit {
+        grid-area: submit;
+    }
+    .contact-form label:not(:first-of-type){
+        margin-top: 0;
+    }
 }
 @include mq($bp-tablet-portrait){
 
