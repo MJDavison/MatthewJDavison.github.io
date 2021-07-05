@@ -22,11 +22,15 @@ samp{
     padding: 0 3rem 1.5rem;
 }
 
+samp button, 
 samp a{
     text-decoration: underline;
     color: aqua;
+    background: transparent;
+    border: none;
 }
 
+samp button:focus,
 samp a:focus{
     color: aquamarine;
 }

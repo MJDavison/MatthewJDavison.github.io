@@ -12,14 +12,14 @@
         flex-direction: row;
         height: max-content;        
     }
-    .page-links a{
+    .page-links button{
         height: max-content;    
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;     
     }
-    .page-links a:not(:last-of-type){
+    .page-links button:not(:last-of-type){
         border-bottom: none;
-        border-right: solid 1px black;
+        border-right: solid 1px white;
     }
 }
 @include mq($bp-tablet-portrait){

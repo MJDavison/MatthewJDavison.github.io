@@ -470,20 +470,21 @@ p {
 }
 
 nav {
+  display: flex;
   z-index: 10;
-  display: grid;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 75%;
   grid-column: left/-right;
   background: var(--clr-primary-300);
-  grid-auto-flow: row;
   transform: translateX(-100%) translateY(-100%);
   transition: ease-out 250ms;
   position: fixed;
   font-family: var(--font-ff-poppins);
   inset: 0;
+  flex-direction: column;
+  align-items: stretch;
 }
 @supports not (inset: 0) {
   nav {
@@ -497,14 +498,7 @@ nav {
   transform: translateX(0) translateY(0);
 }
 
-.page-links {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.page-links > a {
+.page-links > button {
   flex-grow: 100;
   text-decoration: none;
   color: var(--clr-white);
@@ -512,16 +506,17 @@ nav {
   width: 100%;
   padding: 25% 0;
   background: var(--clr-primary-250);
+  border: none;
 }
 
-.page-links a:hover,
-.page-links a:focus {
+.page-links button:hover,
+.page-links button:focus {
   background-color: var(--clr-primary-500);
   border: none;
 }
 
-.page-links > a:not(:last-of-type) {
-  border-bottom: black solid 1px;
+.page-links > button:not(:last-of-type) {
+  border-bottom: white solid 1px;
 }
 
 @media screen and (min-width: 480px) {
@@ -541,15 +536,15 @@ nav {
     height: max-content;
   }
 
-  .page-links a {
+  .page-links button {
     height: max-content;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
 
-  .page-links a:not(:last-of-type) {
+  .page-links button:not(:last-of-type) {
     border-bottom: none;
-    border-right: solid 1px black;
+    border-right: solid 1px white;
   }
 }
 .welcome {
@@ -773,6 +768,7 @@ nav {
   justify-content: center;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: min-content;
+  padding-left: 0;
 }
 
 .project::before .project__caption {
@@ -919,6 +915,8 @@ nav {
   width: max-content;
   color: var(--clr-white);
   text-decoration: underline;
+  background: transparent;
+  border: none;
 }
 
 .project:hover::before .project__caption,
@@ -1121,11 +1119,15 @@ samp {
   padding: 0 3rem 1.5rem;
 }
 
+samp button,
 samp a {
   text-decoration: underline;
   color: aqua;
+  background: transparent;
+  border: none;
 }
 
+samp button:focus,
 samp a:focus {
   color: aquamarine;
 }
@@ -1345,6 +1347,7 @@ textarea.touched:valid {
   margin-right: 100px;
   column-gap: 40px;
   margin-bottom: 15px;
+  padding-left: 0;
 }
 
 .social-icons span {

@@ -11,30 +11,28 @@
 </head>
 
 <body>
-    <a href="#" class="navigation-button" aria-label="Click to open navigation">
+    <button href="#" class="navigation-button" aria-label="Click to open navigation">
         <svg class="hamburger">
             <use class="nav-toggle--burger"  href="#hamburger"/>
             <use class="nav-toggle--close"  href="#close"/>
         </svg>
-    </a>
+    </button>
 
-    <nav>
-        <div class="page-links">
-            <a id="nav__home" href="#home">Home</a>
-            <a href="#portfolio">My Portfolio</a>
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact Me</a> 
-        </div>
+    <nav class="page-links">
+            <button id="nav__home" href="#home">Home</>
+            <button href="#portfolio">My Portfolio</button>
+            <button href="#about">About Me</button>
+            <button href="#contact">Contact Me</button> 
     </nav>
 
-    <section class="welcome" aria-label="Introduction" tabindex="0">        
+    <section class="welcome" aria-label="Introduction" >        
 
         <span class="profile-icon"></span>
         <h3 class="greet">Hi! My name is </h3>
         <h2 class="name">Matthew Davison</h2>
         <p class="role">I'm a Developer. I develop websites, android apps and classical games!</p>     
         
-        <a href="#home" class="down-pointer">
+        <button href="#home" class="down-pointer">
             <svg width="18.5" height="30.5" viewBox="0 0 18.5 30.5">                
                 <g transform="matrix(3.8 0 0 3.8 3.4e-7 0)">
                     <ellipse class="class1" cx="2.4" cy="4" rx="2.2" ry="3.8" />
@@ -45,20 +43,20 @@
                     </g>
                 </g>
             </svg>
-        </a>
+        </>
     </section>
-    <section class="cta" aria-label="Call To Action" id="home"  tabindex="0">
+    <section class="cta" aria-label="Call To Action" id="home"  >
         <h1 class="cta__heading">Struggle, Persevere, Conquer.</h1>
         <p class="quote">
             Regardless of the task or the challenges that come with it, if you struggle and persevere, you’ll eventually conquer any goal.
         </p>
         <p class="ending-statement">This is who I am.</p>
-        <a href="#portfolio" class="cta__button">See My Work</a>
+        <button href="#portfolio" class="cta__button">See My Work</button>
     </section>   
-    <section class="portfolio" aria-label="Portfolio" id="portfolio" tabindex="0">
+    <section class="portfolio" aria-label="Portfolio" id="portfolio" >
         <h1>My Portfolio</h1>
-        <div class="projects" aria-label="Portfolio Items">
-            <figure class="project project--dark" tabindex="0">
+        <ul class="projects" aria-label="Portfolio Items">
+            <figure class="project project--dark" >
                 <img class="project__image project__image--primary" src="img/869-960x960.jpg" alt="a pair of glasses on a closed laptop">                                
                 <span class="fa-solid fa-hand-pointer"></span>
                 <figcaption class="project__caption">
@@ -66,7 +64,7 @@
                     <p class="project__description">
                         In short... this project was creating the website you're currently browsing!
                     </p>
-                    <a href="#" class="project__link">Read More</a>
+                    <button type="button" href="#" class="project__link">Read More</button>
                 </figcaption>                
 
                 <m class="portfolio-modal">
@@ -77,13 +75,13 @@
                     </svg>
 
                     <h1 class="project__title">Personal Website</h1>
-                    <div class="project__header">
+                    <header class="project__header">
                         <img class="project__image" src="img/primary-portfolio.jpg"
                             alt="a pair of glasses on a closed laptop">
                         <p class="project__summary">This project was creating the website you're currently
                             browsing! I'll be giving you some insight into how I made this site from ground-up.</p>                    
-                    </div>
-                    <div class="project_content">
+                    </header>
+                    <section class="project_content">
 
                     <p>
                         I started this project back at the start of June. I decided to create it after seeing countless recruiters state "We can get a much clearer image of who we are hiring when they have a personal website!". One of my biggest concerns while job searching was always "Are they getting a good image of me via my Resume alone?" so I instantly fell in love with that idea. The first question I had was: "Well, okay... how should I do this?" Prior to this, I only had made one web project- my issue tracker. I had no experience designing websites- nor did I even know of any designing tools. 
@@ -95,13 +93,13 @@
                     <p class="modal-full-width">The most important part starts now: CSS, or rather SCSS. I created a 'src/scss' folder and then created a folder for each section ('src/scss/portfolio/') and then made seperate partials for each component in the section, which were then linked into a partial with the same name as the section ('src/scss/portfolio/_portfolio.scss'). You might ask "Isn't that a bit overkill?" and it might be... but it certainly made it very easy to read my CSS and keep track of where to make changes when I had to. </p>
                     <img class="portfolio-pull-left" src="img/portfolio/Personal Website/partials.png" alt="Screenshot of partials"/>
                     <p>Once all the partials were created and linked into a 'main.scss' in the root of the scss folder, the design was done. At that point, I started writing... well, this. I started filling out the details of the projects. After I finish doing that, I'll likely make a backup, as I recently saw another video about 'templating languages'. That will be incredibly helpful for adding new projects to this website in the future, as current I have to manually add them...</p>
-                </div>
+                </section>
                     
 
                 
             </figure>
                 
-            <figure class="project project--light" tabindex="0">
+            <figure class="project project--light" >
                 <img class="project__image project__image--primary" src="img/portfolio/Issue Tracker/LoginScreen960.png"
                     alt="The login screen for my Issue Tracker Project">
                     <span class="fa-solid fa-hand-pointer"></span>
@@ -110,66 +108,66 @@
                     <p class="project__description" id="description">This Issue Tracker was my first real attempt at web
                         development- As you would expect from a issue tracker, it includes issue management, database
                         integration etc</p>
-                    <a class="project__link">Read More</a>
+                    <button type="button" class="project__link">Read More</button>
                 </figcaption>               
 
-                <div class="portfolio-modal">
+                <aside class="portfolio-modal">
                     <svg class="close-modal">
                         <circle cx="15" cy="15" r="14" />
                         <line x1="7" y1="7" x2="23" y2="23" />
                         <line x1="23" y1="7" x2="7" y2="23" />
                     </svg>
                     <h1 class="project__title">Issue Tracker</h1>
-                    <div class="project__header">
+                    <header class="project__header">
                         <img src="img/portfolio/Issue Tracker/LoginScreen960.png"
                             alt="a pair of glasses on a closed laptop">
                         <p class="project__summary">This Issue Tracker was my first real attempt at web development- As you
                         would expect from a issue tracker, it includes issue management, database integration etc</p>
-                    </div>
-                    <div class="project_content">                        
+                    </header>
+                    <section class="project_content">                        
                         <p>The issue tracker was a bit of an ambitous project- It was my first reason project, so I had
                             no idea how to handle things. It was also my first and currently my only ASP.Net Core
                             project using the "MVC" structure. When creating this project, I had no idea how to do CSS
                             and I was heavily depending on divs, rather than using the most appropriate elements (such
                             as sections, articles etc).</p>
-                    </div>
-                </div>
+                    </section>
+                </aside>
             </figure>            
              
-            <figure class="project project--light" tabindex="0">
+            <figure class="project project--light" >
                 <img class="project__image project__image--primary" src="https://picsum.photos/960?random=1"
                     alt="A random picsum image, 960 by 960">
                     <span class="fa-solid fa-hand-pointer"></span>
                 <figcaption class="project__caption project__caption--active">
                     <h3 class="project__title" id="title">Placeholder Project</h3>
                     <p class="project__description" id="description">This is a placeholder project</p>
-                    <a class="project__link">Read More</a>
+                    <button type="button" class="project__link">Read More</button>
                 </figcaption>               
             </figure>            
-            <figure class="project project--light" tabindex="0">
+            <figure class="project project--light" >
                 <img class="project__image project__image--primary" src="https://picsum.photos/960?random=2"
                     alt="A random picsum image, 960 by 960">
                     <span class="fa-solid fa-hand-pointer"></span>
                 <figcaption class="project__caption project__caption--active">
                     <h3 class="project__title" id="title">Placeholder Project</h3>
                     <p class="project__description" id="description">This is a placeholder project</p>
-                    <a class="project__link">Read More</a>
+                    <button type="button" class="project__link">Read More</button>
                 </figcaption>               
             </figure>            
-            <figure class="project project--light" tabindex="0">
+            <figure class="project project--light" >
                 <img class="project__image project__image--primary" src="https://picsum.photos/960?random=3"
                     alt="A random picsum image, 960 by 960">
                     <span class="fa-solid fa-hand-pointer"></span>
                 <figcaption class="project__caption project__caption--active">
                     <h3 class="project__title" id="title">Placeholder Project</h3>
                     <p class="project__description" id="description">This is a placeholder project</p>
-                    <a class="project__link">Read More</a>
+                    <button type="button" class="project__link">Read More</button>
                 </figcaption>               
             </figure>            
-        </div>
+        </ul>
     </section>
  
-    <section class="about" aria-label="About Me" id="about"  tabindex="0">
+    <section class="about" aria-label="About Me" id="about"  >
         <h1>About Me</h1>
         
         <samp>
@@ -204,14 +202,14 @@
 
 
             > $matthew.Resumes <br>
-            <a href="#" class="modal__link" id="resumesLink">Click here</a> to view all my role-specific resumes! <br> <br>
+            <button href="#" class="modal__link" id="resumesLink">Click here</button> to view all my role-specific resumes! <br> <br>
 
             > $matthew.Disclaimer <br>
             For privacy reasons, I haven't included details such as home address or mobile number on the CV or resumes.
             Please email me if interested and I can share my mobile number then. Thank you!
         </samp>
 
-        <div class="portfolio-modal">
+        <aside class="portfolio-modal">
             <svg class="close-modal">
                 <circle cx="15" cy="15" r="14" />
                 <line x1="7" y1="7" x2="23" y2="23" />
@@ -220,33 +218,33 @@
 
             <h1 class="project__title">Resumes</h1>          
 
-            <div class="resume-items">
+            <ul class="resume-items">
 
-                <figure class="resume__card" tabindex="0">
-                    <a class="resume__card--link" href="https://www.dropbox.com/sh/79cw4c1nppqbtif/AABMJ1dcc2cjv1iZY4HO8EXSa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                <figure class="resume__card" >
+                    <button class="resume__card--link" href="https://www.dropbox.com/sh/79cw4c1nppqbtif/AABMJ1dcc2cjv1iZY4HO8EXSa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
                         <p class="resume__role">Web Designer</p>
-                    </a>
+                    </button>
                 </figure>
-                <figure class="resume__card" tabindex="0">
-                    <a class="resume__card--link" href="https://www.dropbox.com/sh/lj36cv16c1wvu0x/AAAzdcf2PIqVIPbXMvIcdZbra?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                <figure class="resume__card" >
+                    <button class="resume__card--link" href="https://www.dropbox.com/sh/lj36cv16c1wvu0x/AAAzdcf2PIqVIPbXMvIcdZbra?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
                         <p class="resume__role">Android Developer</p>
-                    </a>
+                    </button>
                 </figure>
-                <figure class="resume__card" tabindex="0">
-                    <a class="resume__card--link" href="https://www.dropbox.com/sh/4bubmdbnomc49ob/AAAwaxjA7beu9z0U87NRCSIUa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                <figure class="resume__card" >
+                    <button class="resume__card--link" href="https://www.dropbox.com/sh/4bubmdbnomc49ob/AAAwaxjA7beu9z0U87NRCSIUa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
                         <p class="resume__role">Shop Assistant</p>
-                    </a>
+                    </button>
                 </figure>
-                <figure class="resume__card" tabindex="0">
-                    <a class="resume__card--link" href="https://www.dropbox.com/sh/mbhgj9aomqo0sph/AAAGOcrrXS0eCxt3eb-0zDkwa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
+                <figure class="resume__card" >
+                    <button class="resume__card--link" href="https://www.dropbox.com/sh/mbhgj9aomqo0sph/AAAGOcrrXS0eCxt3eb-0zDkwa?dl=0" target='_blank' download="Matthew Davison Web Designer Resume" aria-label="Click here to download my Web Designer Resume!">
                         <p class="resume__role">IT Support Associate</p>
-                    </a>
+                    </button>
                 </figure>
-            </div>
-        </div>
+            </ul>
+        </aside>
     </section>
 
-    <section class="contact" aria-label="Contact Me" id="contact"  tabindex="0">
+    <section class="contact" aria-label="Contact Me" id="contact"  >
         <h1>Contact Me</h1>
         <form class="contact-form" aria-label="Contact Form" action="https://formspree.io/f/xgeryark" method="POST"
             autocomplete="off">
@@ -266,17 +264,23 @@
         </form>
     </section>
 
-    <section class="footer" aria-label="Footer"  tabindex="0">
+    <section class="footer" aria-label="Footer"  >
         <p>Follow me on Social Media</p>
-        <div class="social-icons">
-            <a href="https://github.com/matthewjdavison" target='_blank'><span class="fab fa-github"></span></a>
-            <a href="#"><span class="fab fa-twitter" target='_blank'></span></a>
-            <a href="https://dribbble.com/MatthewJDavison" target='_blank'><span class="fab fa-dribbble"></span></a>
-        </div>
+        <address class="social-icons">
+            <abutton href="https://github.com/matthewjdavison" target='_blank' aria-label="Github Profile">
+                <span class="fab fa-github"></span>
+            </abutton>
+            <button href="#" target='_blank' aria-label="Twitter Profile">
+                <span class="fab fa-twitter" ></span>
+            </button>
+            <button href="https://dribbble.com/MatthewJDavison" target='_blank' aria-label="Dribbble Profile">
+                <span class="fab fa-dribbble"></span>
+            </button>
+        </address>
         <span class="copyright">&copy;Copyright 2021 Matthew Davison</span>
     </section>
 
-    <svg height="0px">        
+    <svg height="0px" aria-label="Hamburger icon">        
             <symbol class="hamburger__svg" id="hamburger" aria-label="Hamburger icon" viewBox="0 0 30 30"> <!--25-->
                 <rect width="30" height="30" fill="transparent"/>
 
