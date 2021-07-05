@@ -1007,6 +1007,11 @@ nav {
   stroke: none;
 }
 
+@media screen and (min-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 @media screen and (min-width: 768px) {
   .projects {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1279,6 +1284,36 @@ textarea.touched:valid {
   background: var(--clr-secondary-520);
 }
 
+@media screen and (min-width: 480px) {
+  .contact-form {
+    grid-template-areas: "name email" "subject ." "message message" ". submit";
+    column-gap: 1rem;
+  }
+
+  .form-name {
+    grid-area: name;
+  }
+
+  .form-email {
+    grid-area: email;
+  }
+
+  .form-subject {
+    grid-area: subject;
+  }
+
+  .form-message {
+    grid-area: message;
+  }
+
+  .form-submit {
+    grid-area: submit;
+  }
+
+  .contact-form label:not(:first-of-type) {
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 1920px) {
   .contact {
     width: 60vw;
