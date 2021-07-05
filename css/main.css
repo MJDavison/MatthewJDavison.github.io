@@ -1350,6 +1350,11 @@ textarea.touched:valid {
   padding-left: 0;
 }
 
+.social-icons > button {
+  background: transparent;
+  border: none;
+}
+
 .social-icons span {
   font-size: 30px;
 }
